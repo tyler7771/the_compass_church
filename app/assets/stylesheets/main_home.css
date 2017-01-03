@@ -1,0 +1,18 @@
+.splash-image {
+  background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/v1483484265/2e_dt65fyxo-glenn-carstens-peters_stzutd.jpg") center center no-repeat;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  font-weight: 300;
+  font-size: 150px;
+}

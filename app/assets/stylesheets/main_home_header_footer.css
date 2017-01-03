@@ -1,0 +1,33 @@
+.header-content {
+  width: 97%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+  font-size: 18px;
+}
+
+.header-image {
+  height: 90px;
+}
+
+.links {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.give {
+  padding: 10px 15px;
+  background: transparent;
+  border: none;
+  outline: 2px solid #E20F28;
+  color: #E20F28;
+}
+
+.give:hover {
+  background: #E20F28;
+  color: white;
+}
