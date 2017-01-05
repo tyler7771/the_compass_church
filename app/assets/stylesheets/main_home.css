@@ -1,10 +1,11 @@
 .splash-image {
   background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/v1483484265/2e_dt65fyxo-glenn-carstens-peters_stzutd.jpg") center center no-repeat;
-  position: absolute;
   z-index: 0;
-  left: 0;
   width: 100%;
-  height: 80%;
+  height: 650px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -15,4 +16,91 @@ h1 {
   color: white;
   font-weight: 300;
   font-size: 150px;
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+h2 {
+  padding-bottom: 50px;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.campus-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.campus-link {
+  width: 30%;
+}
+
+.campus-link > div {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.campus-title {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 30px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.campus-details {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.selma-link:hover > .campus-details{
+  opacity: 1;
+  height: 80px;
+  transition: opacity 1s ease-out;
+}
+
+.winchester-link:hover > .campus-details{
+  opacity: 1;
+  height: 80px;
+  transition: opacity 1s ease-out;
+}
+
+.yorktown-link:hover > .campus-details{
+  opacity: 1;
+  height: 80px;
+  transition: opacity 1s ease-out;
+}
+
+.selma-link {
+  background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/v1483488840/Selma-Campus-Building-400x400_om2wvg.jpg") center center no-repeat;
+}
+
+.winchester-link {
+  background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/v1483488840/Winchester_mh18mz.jpg") center center no-repeat;
+}
+
+.yorktown-link {
+  background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/v1483488840/Yorktown-campus_kxdaji.jpg") center center no-repeat;
 }

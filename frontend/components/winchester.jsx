@@ -1,11 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router';
-import WinchesterHeaderContainer from './header/winchester/winchesterheadercontainer';
+// import WinchesterHeaderContainer from './header/winchester/winchesterheadercontainer';
+import Footer from './footer/footer';
 
 const Winchester = ({ children }) => (
   <div className="background">
-    <WinchesterHeaderContainer />
-    {children}
+    <section className="content">
+
+      {children}
+    </section>
+    <Footer />
   </div>
 );
 

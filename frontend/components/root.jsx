@@ -3,9 +3,12 @@ import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import App from './app';
 import Home from './home/home';
-// import Selma from './selma';
-// import Winchester from './winchester';
-// import Yorktown from './yorktown';
+import SelmaHome from './home/selma';
+import WinchesterHome from './home/winchester';
+import YorktownHome from './home/yorktown';
+import Selma from './selma';
+import Winchester from './winchester';
+import Yorktown from './yorktown';
 
 const Root = ({ store }) => {
 
@@ -22,7 +25,15 @@ const Root = ({ store }) => {
         <Route path="/" component={App}>
           <IndexRoute component={Home}/>
         </Route>
-
+        <Route path="/selma" component={Selma}>
+          <IndexRoute component={SelmaHome}/>
+        </Route>
+        <Route path="/winchester" component={Winchester}>
+          <IndexRoute component={WinchesterHome}/>
+        </Route>
+        <Route path="/yorktown" component={Yorktown}>
+          <IndexRoute component={YorktownHome}/>
+        </Route>
       </Router>
     </Provider>
   );

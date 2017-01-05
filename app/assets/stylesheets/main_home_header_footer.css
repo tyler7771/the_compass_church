@@ -13,14 +13,18 @@
 }
 
 .links {
-  width: 50%;
+  width: 70%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+.links > a {
+  margin: 10px;
 }
 
 .give {
-  padding: 10px 15px;
+  padding: 10px 17px;
   background: transparent;
   border: none;
   outline: 2px solid #E20F28;
@@ -30,4 +34,42 @@
 .give:hover {
   background: #E20F28;
   color: white;
+}
+
+.mission-statement {
+  background-color: #262626;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  font-size: 25px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.footer-links {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #171819;
+}
+
+.social-media-links > a {
+  padding: 5px;
+  font-size: 30px;
+  color: #919191;
+}
+
+.social-media-links > a:hover {
+  color: #FFFFFF;
+}
+
+.footer-links > p {
+  padding: 5px;
+  font-size: 13px;
+  color: #919191;
 }
