@@ -9,8 +9,8 @@ const Header = () => {
           <img className="header-image" src="http://res.cloudinary.com/dmow8kfvt/image/upload/v1483481411/CC-UM-Vertical_nsoikb.png" />
         </Link>
         <div className="links">
-          <a href="/">HOME</a>
-          <a>VISIT</a>
+          <Link to="/">HOME</Link>
+          <Link to="/visit">VISIT</Link>
           <a>ABOUT</a>
           <a>CONNECT</a>
           <a>SERMONS</a>

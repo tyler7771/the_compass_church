@@ -1,0 +1,47 @@
+.visit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.visit > .locations {
+  width: 100%
+}
+
+.selma-link > button, .winchester-link > button, .yorktown-link > button {
+  width: 75%;
+  margin: 15px auto;
+  height: 40px;
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 20px;
+  outline: none;
+}
+
+.selma-link > button:hover, .winchester-link > button:hover, .yorktown-link > button:hover {
+  color: #E20F28;
+  background: white;
+}
+
+.no-details {
+  height: 0px;
+}
+
+.campus-info {
+  margin-top: 50px;
+  width: 95%;
+  display: flex;
+}
+
+.map {
+  width: 300px;
+  height: 300px;
+  margin-right: 20px;
+}
+
+.campus-info-details {
+  background: red;
+}
