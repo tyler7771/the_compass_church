@@ -34,14 +34,52 @@
   margin-top: 50px;
   width: 95%;
   display: flex;
+  justify-content: center;
 }
 
 .map {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   margin-right: 20px;
 }
 
 .campus-info-details {
-  background: red;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.address {
+  display: flex;
+}
+
+.address > span{
+  margin-right: 40px;
+}
+
+.campus-info-details-text {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.campus-info-details-text-winchester {
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.campus-info-details-text > h3, .campus-info-details-text-winchester > h3 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.campus-info-details > a {
+  width: 122px;
+  padding: 10px;
+  color: white;
+  background: grey;
 }
