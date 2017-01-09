@@ -92,7 +92,9 @@ class Visit extends React.Component {
   render () {
     return (
       <div className="visit">
-        <h2>VISIT</h2>
+        <div className="visit-header">
+          <h2>VISIT</h2>
+        </div>
         <div className="locations">
           <h2>OUR LOCATIONS</h2>
           <div className="campus-links">
@@ -116,6 +118,9 @@ class Visit extends React.Component {
             </Link>
           </div>
           {this.locationInfo()}
+        </div>
+        <div className="what-to-expect">
+          <h2>WHAT TO EXPECT</h2>
         </div>
       </div>
     );
