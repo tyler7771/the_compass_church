@@ -10,6 +10,9 @@ import Selma from './selma';
 import Winchester from './winchester';
 import Yorktown from './yorktown';
 import Visit from './visit/visit';
+import SelmaVisit from './visit/selmavisit';
+import WinchesterVisit from './visit/winchestervisit';
+import YorktownVisit from './visit/yorktownvisit';
 
 const Root = ({ store }) => {
 
@@ -30,12 +33,15 @@ const Root = ({ store }) => {
         </Route>
         <Route path="/selma" component={Selma}>
           <IndexRoute component={SelmaHome}/>
+          < Route path="/selma/visit" component={SelmaVisit} />
         </Route>
         <Route path="/winchester" component={Winchester}>
           <IndexRoute component={WinchesterHome}/>
+          < Route path="/winchester/visit" component={WinchesterVisit} />
         </Route>
         <Route path="/yorktown" component={Yorktown}>
           <IndexRoute component={YorktownHome}/>
+          < Route path="/yorktown/visit" component={YorktownVisit} />
         </Route>
       </Router>
     </Provider>
