@@ -129,7 +129,7 @@ class Visit extends React.Component {
               <p>What can you expect at The Compass Church:</p>
               <br/>
               <ul>
-                <li>&ensp;• A warm welcom from friendly faces</li>
+                <li>&ensp;• A warm welcome from friendly faces</li>
                 <li>&ensp;• Environments for every age</li>
                 <li>&ensp;• Engaging worship and a Relevant message</li>
               </ul>

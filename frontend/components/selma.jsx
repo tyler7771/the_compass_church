@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router';
-// import SelmaHeaderContainer from './header/selma/selmaheadercontainer';
+import SelmaHeader from './header/selma/selmaheader';
 import Footer from './footer/footer';
 
 const Selma = ({ children }) => (
   <div className="background">
     <section className="content">
-
+      <SelmaHeader />
       {children}
     </section>
     <Footer />
