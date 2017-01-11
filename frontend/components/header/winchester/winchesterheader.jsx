@@ -12,7 +12,13 @@ const Header = () => {
           <Link to="/">HOME</Link>
           <Link to="/winchester">WINCHESTER HOME</Link>
           <Link to="/winchester/visit">VISIT</Link>
-          <a>ABOUT</a>
+          <div className="header-about">
+            <a>ABOUT</a>
+              <ul className="about-dropdown">
+                <a href="/winchester/staff"><li>STAFF</li></a>
+                <a href="/mission"><li>MISSION</li></a>
+              </ul>
+          </div>
           <a>CONNECT</a>
           <a>SERMONS</a>
           <a>CONTACT</a>

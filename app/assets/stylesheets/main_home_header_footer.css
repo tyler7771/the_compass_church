@@ -21,6 +21,91 @@
 
 .links > a {
   margin: 10px;
+  cursor: pointer;
+}
+
+.links > a:hover {
+  color: #E20F28
+}
+
+.header-about, .header-connect, .header-next-step {
+  margin: 10px;
+  position: relative;
+}
+
+.header-about:hover > a {
+  color: #E20F28;
+  cursor: pointer;
+}
+
+.header-connect:hover > a {
+  color: #E20F28;
+  cursor: pointer;
+}
+
+.header-next-step:hover > a {
+  color: #E20F28;
+  cursor: pointer;
+}
+
+.header-about:hover > .about-dropdown {
+  opacity: 1;
+  height: 75px;
+  transition: opacity .5s ease-out;
+}
+
+.header-connect:hover > .connect-dropdown {
+  opacity: 1;
+  height: 240px;
+  transition: opacity .5s ease-out;
+}
+
+.header-next-step:hover > .next-step-dropdown {
+  opacity: 1;
+  height: 145px;
+  transition: opacity .5s ease-out;
+}
+
+.connect-dropdown {
+  width: 150px;
+}
+
+.next-step-dropdown {
+  width: 250px;
+}
+
+.about-dropdown, .connect-dropdown, .next-step-dropdown {
+  padding: 10px 20px 0 10px;
+  left: -10px;
+  position: absolute;
+  transition: opacity .2s ease-out;
+  opacity: 0;
+  height: 0;
+  background: white;
+}
+
+.about-dropdown > a > li {
+  margin-top: 9px;
+}
+
+.connect-dropdown > a > li {
+  margin-top: 9px;
+}
+
+.next-step-dropdown > a > li {
+  margin-top: 9px;
+}
+
+.about-dropdown > a:hover {
+  color: #E20F28
+}
+
+.connect-dropdown > a:hover {
+  color: #E20F28
+}
+
+.next-step-dropdown > a:hover {
+  color: #E20F28
 }
 
 .give {
