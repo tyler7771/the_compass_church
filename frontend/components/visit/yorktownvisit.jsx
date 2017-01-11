@@ -66,8 +66,15 @@ class Visit extends React.Component {
           </div>
         </div>
       );
-    } else if (this.state.locationDetails === "yorktown") {
-      return (
+    }
+  }
+
+  render () {
+    return (
+      <div className="visit">
+        <div className="visit-header">
+          <h2>VISIT YORKTOWN</h2>
+        </div>
         <div className="campus-info">
           <CampusMap className="campus-map"
             center={"yorktown"}
@@ -85,18 +92,8 @@ class Visit extends React.Component {
             <a href="https://www.google.com/maps/dir//The+Compass+Church+-+Yorktown,+8116+W+Jackson+St,+Muncie,+IN+47304/@40.2108617,-85.5166683,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x8815227cd4542c5b:0xfaddb1cb57dcc2de!2m2!1d-85.481563!2d40.210867" target="_blank" className="directions"><span className="fa fa-road"></span> Directions</a>
           </div>
         </div>
-      );
-    }
-  }
-
-  render () {
-    return (
-      <div className="visit">
-        <div className="visit-header">
-          <h2>VISIT</h2>
-        </div>
         <div className="locations">
-          <h2>OUR LOCATIONS</h2>
+          <h2>OUR OTHER LOCATIONS</h2>
           <div className="campus-links">
             <Link to="/selma" className="campus-link">
               <div className="selma-link">
@@ -108,12 +105,6 @@ class Visit extends React.Component {
               <div className="winchester-link">
                 <div className="campus-title">WINCHESTER</div>
                 <button onClick={ (e) => this.handleButton(e, "winchester") }>CAMPUS DETAILS</button>
-              </div>
-            </Link>
-            <Link to="/yorktown" className="campus-link">
-              <div className="yorktown-link">
-                <div className="campus-title">YORKTOWN</div>
-                <button onClick={ (e) => this.handleButton(e, "yorktown") }>CAMPUS DETAILS</button>
               </div>
             </Link>
           </div>
