@@ -1,0 +1,97 @@
+.staff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.staff-header {
+  background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/c_scale,h_1500,w_5000/v1483747438/fw98ccvzweq-lukas-budimaier_efi24l.jpg") center center no-repeat;
+  width: 100%;
+  height: 400px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.staff-header > h2 {
+  font-size: 80px;
+  color: white;
+}
+
+.staff > h2 {
+  font-size: 50px;
+  padding-bottom: 50px;
+}
+.staff-row {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.staff-member {
+  width: 25%;
+  height: auto;
+}
+
+.picture-and-name {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px
+}
+
+.title-and-button {
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.picture-and-name > img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 15px;
+}
+
+.staff-name {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.line {
+  width: 50%;
+  border-bottom: 1px solid #ccc;
+}
+
+.title-and-button > p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.staff-info-button {
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #E20F28;
+  color: #E20F28;
+}
+
+.staff-info-button:hover {
+  background: #E20F28;
+  color: white;
+}
+
+.hidden {
+  height: 51px;
+}
