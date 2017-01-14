@@ -95,3 +95,68 @@
 .hidden {
   height: 51px;
 }
+
+.staff-modal {
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  outline: none;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.modal-close {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  cursor: pointer;
+}
+
+.modal-picture {
+  width: 300px;
+  height: 300px;
+  padding-right: 20px;
+}
+
+.modal-info {
+  width: 57%;
+}
+
+.modal-name {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.modal-job {
+  font-size: 20px;
+}
+
+.modal-email {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+.modal-description {
+  font-size: 18px;
+}
+
+.ReactModal__Overlay--after-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}

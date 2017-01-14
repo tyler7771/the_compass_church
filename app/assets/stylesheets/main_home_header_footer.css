@@ -116,11 +116,6 @@
   color: #E20F28;
 }
 
-.give:hover {
-  background: #E20F28;
-  color: white;
-}
-
 .mission-statement {
   background-color: #262626;
   color: white;
@@ -157,4 +152,9 @@
   padding: 5px;
   font-size: 13px;
   color: #919191;
+}
+
+.give:hover {
+  background: #E20F28;
+  color: white;
 }
