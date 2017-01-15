@@ -132,8 +132,6 @@ class Visit extends React.Component {
                 <div className="staff-info-button" onClick={ (e) => this.handleButton(e, "Bill")}>MORE INFO</div>
               </div>
             </div>
-            <div className="staff-member">
-            </div>
           </div>
           <h2>SELMA CAMPUS STAFF</h2>
           <div className="staff-row">
@@ -159,6 +157,8 @@ class Visit extends React.Component {
                 <div className="hidden"> </div>
               </div>
             </div>
+          </div>
+          <div className="staff-row">
             <div className="staff-member">
               <div className="picture-and-name">
                 <img src="http://res.cloudinary.com/dmow8kfvt/image/upload/v1484346733/Vicky-1_nsychc.jpg"/>
@@ -170,8 +170,6 @@ class Visit extends React.Component {
                 <div className="hidden"> </div>
               </div>
             </div>
-          </div>
-          <div className="staff-row">
             <div className="staff-member">
               <div className="picture-and-name">
                 <img src="http://res.cloudinary.com/dmow8kfvt/image/upload/v1484346734/Melissa-Engle-Pic_ykbdn0.jpg"/>
@@ -182,10 +180,6 @@ class Visit extends React.Component {
                 <p>ADMINISTRATIVE ASSISTANT</p>
                 <div className="staff-info-button" onClick={ (e) => this.handleButton(e, "Melissa")}>MORE INFO</div>
               </div>
-            </div>
-            <div className="staff-member">
-            </div>
-            <div className="staff-member">
             </div>
           </div>
           <h2>YORKTOWN CAMPUS STAFF</h2>
@@ -212,6 +206,8 @@ class Visit extends React.Component {
                 <div className="staff-info-button" onClick={ (e) => this.handleButton(e, "Leigh")}>MORE INFO</div>
               </div>
             </div>
+          </div>
+          <div className="staff-row">
             <div className="staff-member">
               <div className="picture-and-name">
                 <img src="http://res.cloudinary.com/dmow8kfvt/image/upload/v1484346735/Shane-1_knre0y.jpg"/>
@@ -223,8 +219,6 @@ class Visit extends React.Component {
                 <div className="hidden"> </div>
               </div>
             </div>
-          </div>
-          <div className="staff-row">
             <div className="staff-member">
               <div className="picture-and-name">
                 <img src="http://res.cloudinary.com/dmow8kfvt/image/upload/v1484346734/Bo-1_dzfnao.jpg"/>
@@ -235,10 +229,6 @@ class Visit extends React.Component {
                 <p>CUSTODIAN</p>
                 <div className="hidden"> </div>
               </div>
-            </div>
-            <div className="staff-member">
-            </div>
-            <div className="staff-member">
             </div>
           </div>
           <h2>WINCHESTER CAMPUS STAFF</h2>
@@ -265,6 +255,8 @@ class Visit extends React.Component {
                 <div className="staff-info-button" onClick={ (e) => this.handleButton(e, "Lori C")}>MORE INFO</div>
               </div>
             </div>
+          </div>
+          <div className="staff-row">
             <div className="staff-member">
               <div className="picture-and-name">
                 <img src="http://res.cloudinary.com/dmow8kfvt/image/upload/v1484346731/Caleb-1_suzrve.jpg"/>
@@ -276,8 +268,6 @@ class Visit extends React.Component {
                 <div className="staff-info-button" onClick={ (e) => this.handleButton(e, "Caleb")}>MORE INFO</div>
               </div>
             </div>
-          </div>
-          <div className="staff-row">
             <div className="staff-member">
               <div className="picture-and-name">
                 <img src="http://res.cloudinary.com/dmow8kfvt/image/upload/v1484346732/Brad-1_e6uclt.jpg"/>
@@ -288,10 +278,6 @@ class Visit extends React.Component {
                 <p>CUSTODIAN</p>
                 <div className="hidden"> </div>
               </div>
-            </div>
-            <div className="staff-member">
-            </div>
-            <div className="staff-member">
             </div>
           </div>
         </div>
