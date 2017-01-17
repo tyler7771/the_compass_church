@@ -14,6 +14,7 @@ import Staff from './staff/main_staff';
 import SelmaVisit from './visit/selmavisit';
 import WinchesterVisit from './visit/winchestervisit';
 import YorktownVisit from './visit/yorktownvisit';
+import Mission from './mission/mission';
 
 const Root = ({ store }) => {
 
@@ -32,6 +33,7 @@ const Root = ({ store }) => {
           <IndexRoute component={Home}/>
           <Route path="/visit" component={Visit} />
           <Route path="/staff" component={Staff} />
+          <Route path="/mission" component={Mission} />
         </Route>
         <Route path="/selma" component={Selma}>
           <IndexRoute component={SelmaHome}/>

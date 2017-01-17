@@ -15,7 +15,7 @@ const Header = () => {
             <Link to="/about">ABOUT</Link>
               <ul className="about-dropdown">
                 <a href="/#/staff"><li>STAFF</li></a>
-                <a href="/mission"><li>MISSION</li></a>
+                <a href="/#/mission"><li>MISSION</li></a>
               </ul>
           </div>
           <div className="header-connect">
