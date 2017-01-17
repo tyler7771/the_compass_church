@@ -37,11 +37,11 @@ class Mission extends React.Component {
           <img src="http://res.cloudinary.com/dmow8kfvt/image/upload/v1484685271/Compass-Church-Mission-Vision_dadglw.jpg"/>
           <div className="vision-text">
             <span>Reaching</span>
-            <p>We believe in… reaching our non-churched neighbors in relational and missional ways, inviting them to church and introducing them to Christ. We expect new people to embrace Christ as Savior and Lord of their life and become authentic believers in Jesus Christ.</p>
+            <p>We believe in reaching our non-churched neighbors in relational and missional ways, inviting them to church and introducing them to Christ. We expect new people to embrace Christ as Savior and Lord of their life and become authentic believers in Jesus Christ.</p>
             <span>Teaching</span>
-            <p>We believe in…teaching our members in relational and missional ways, teaching them to live like Christ. We expect our members to embrace Christ as Savior and Lord of their life and become authentic followers of Jesus Christ.</p>
+            <p>We believe in teaching our members in relational and missional ways, teaching them to live like Christ. We expect our members to embrace Christ as Savior and Lord of their life and become authentic followers of Jesus Christ.</p>
             <span>Releasing</span>
-            <p>We believe in… releasing those trained to lead to bring about transformation in individuals, families, communities, and throughout the world. We expect trained leaders to be dedicated disciplers for Jesus Christ by helping others along our Growth Grid.</p>
+            <p>We believe in releasing those trained to lead to bring about transformation in individuals, families, communities, and throughout the world. We expect trained leaders to be dedicated disciplers for Jesus Christ by helping others along our Growth Grid.</p>
           </div>
         </div>
       </div>

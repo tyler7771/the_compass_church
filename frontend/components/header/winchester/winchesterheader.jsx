@@ -16,7 +16,7 @@ const Header = () => {
             <a>ABOUT</a>
               <ul className="about-dropdown">
                 <a href="/winchester/staff"><li>STAFF</li></a>
-                <a href="/mission"><li>MISSION</li></a>
+                <a href="/#/mission"><li>MISSION</li></a>
               </ul>
           </div>
           <a>CONNECT</a>
