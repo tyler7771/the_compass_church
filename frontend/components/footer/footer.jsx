@@ -14,7 +14,7 @@ const Footer = () => {
           <a href="https://www.facebook.com/thecompasschurch.yorktown" target="_blank"><span className="fa fa-facebook-square"></span></a>
           <a href="https://vimeo.com/thecompasschurch" target="_blank"><span className="fa fa-vimeo-square"></span></a>
         </div>
-        <p>Copyright <span className="fa fa-copyright"></span> 2017 The Compass Church</p>
+        <p>Copyright <Link to="/login" className="login-link"><span className="fa fa-copyright"></span></Link> 2017 The Compass Church</p>
       </div>
     </footer>
   );
