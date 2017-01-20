@@ -1,15 +1,13 @@
 import React from 'react';
 import { hashHistory, withRouter, Link } from 'react-router';
-import SessionForm from '../sessionForm/session_form_container';
+import SessionForm from './session_form_container';
 
 class Welcome extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {type: "button"};
-    this.handleGuestLogin = this.handleGuestLogin.bind(this);
   }
-
 
   handleLogin(e) {
     e.preventDefault();
@@ -38,19 +36,7 @@ class Welcome extends React.Component {
   }
 
   render () {
-    return (
-      <div>
-        <div className="background">
-        </div>
-        <div className="opacity"></div>
-        <div className="welcome-content">
-          <img className="logo" src="http://res.cloudinary.com/dfmvfna21/image/upload/c_scale,h_108/v1478714046/unbrewdOfficial-white_nwmhph.png" />
-          <div className="welcome">
-            <SessionForm formType = "Log in" action={this.props.login}/>
-          </div>
-          </div>
-      </div>
-    );
+    return (<SessionForm formType = "Log in" action={this.props.login}/>);
   }
 }
 

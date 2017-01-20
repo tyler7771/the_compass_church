@@ -15,6 +15,7 @@ import SelmaVisit from './visit/selmavisit';
 import WinchesterVisit from './visit/winchestervisit';
 import YorktownVisit from './visit/yorktownvisit';
 import Mission from './mission/mission';
+import Login from './login/login_container';
 
 const Root = ({ store }) => {
 
@@ -31,6 +32,7 @@ const Root = ({ store }) => {
 
         <Route path="/" component={App}>
           <IndexRoute component={Home}/>
+          <Route path="/login" component={Login} />
           <Route path="/visit" component={Visit} />
           <Route path="/staff" component={Staff} />
           <Route path="/mission" component={Mission} />

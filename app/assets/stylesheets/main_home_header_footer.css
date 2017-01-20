@@ -28,7 +28,7 @@
   color: #E20F28
 }
 
-.header-about, .header-connect, .header-next-step {
+.header-about, .header-connect, .header-next-step, .header-daycare {
   margin: 10px;
   position: relative;
 }
@@ -48,7 +48,18 @@
   cursor: pointer;
 }
 
+.header-daycare:hover > a {
+  color: #E20F28;
+  cursor: pointer;
+}
+
 .header-about:hover > .about-dropdown {
+  opacity: 1;
+  height: 75px;
+  transition: opacity .5s ease-out;
+}
+
+.header-daycare:hover > .daycare-dropdown {
   opacity: 1;
   height: 75px;
   transition: opacity .5s ease-out;
@@ -66,7 +77,7 @@
   transition: opacity .5s ease-out;
 }
 
-.connect-dropdown {
+.connect-dropdown, .daycare-dropdown {
   width: 150px;
 }
 
@@ -74,7 +85,7 @@
   width: 250px;
 }
 
-.about-dropdown, .connect-dropdown, .next-step-dropdown {
+.about-dropdown, .connect-dropdown, .next-step-dropdown, .daycare-dropdown {
   padding: 10px 20px 0 10px;
   left: -10px;
   position: absolute;
@@ -96,6 +107,10 @@
   margin-top: 9px;
 }
 
+.daycare-dropdown > a > li {
+  margin-top: 9px;
+}
+
 .about-dropdown > a:hover {
   color: #E20F28
 }
@@ -105,6 +120,10 @@
 }
 
 .next-step-dropdown > a:hover {
+  color: #E20F28
+}
+
+.daycare-dropdown > a:hover {
   color: #E20F28
 }
 
