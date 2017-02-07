@@ -8,17 +8,6 @@ class Mission extends React.Component {
 
   }
 
-  handleButton (e, button) {
-    e.preventDefault();
-    if (button === "selma") {
-      this.setState({locationDetails: "selma"});
-    } else if (button === "winchester") {
-      this.setState({locationDetails: "winchester"});
-    } else if (button === "yorktown") {
-      this.setState({locationDetails: "yorktown"});
-    }
-  }
-
   render () {
     return (
       <div className="mission">

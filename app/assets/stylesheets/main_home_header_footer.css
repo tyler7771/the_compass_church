@@ -24,7 +24,7 @@
   cursor: pointer;
 }
 
-.links > a:hover {
+.links > a:not(:last-child):hover {
   color: #E20F28
 }
 
@@ -176,8 +176,85 @@
 .give:hover {
   background: #E20F28;
   color: white;
+  cursor: pointer;
 }
 
 .login-link {
   cursor: default;
+}
+
+.mobile-header-content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+  font-size: 18px;
+}
+
+.mobile-header-content > span {
+  font-size: 50px;
+  float: left;
+}
+
+.mobile-menu {
+  width: 0%;
+  display: none;
+  -webkit-transition:width, 0.5s linear;
+  -moz-transition: width, 0.5s linear;
+  -ms-transition: width, 0.5s linear;
+  -o-transition: width, 0.5s linear;
+  transition: width, 0.5s linear;
+}
+
+.mobile-menu.open {
+    width:30%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background: white;
+    top: 0;
+    height: 100%;
+    -webkit-transition:width, 0.5s linear;
+    -moz-transition: width, 0.5s linear;
+    -ms-transition: width, 0.5s linear;
+    -o-transition: width, 0.5s linear;
+    transition: width, 0.5s linear;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+
+.blank {
+  width: 42px;
+}
+
+.about-mobile {
+  display: none;
+}
+
+.connect-mobile {
+  display: none;
+}
+
+.next-step-mobile {
+  display: none;
+}
+
+.daycare-mobile {
+  display: none;
+}
+
+.mobile-menu > li {
+  padding: 40px 25px;
+  font-size: 40px;
+  font-weight: 300;
+  border-bottom: 1px solid grey;
 }
