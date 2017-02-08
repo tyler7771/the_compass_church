@@ -201,11 +201,11 @@
 .mobile-menu {
   width: 0%;
   display: none;
-  -webkit-transition:width, 0.5s linear;
-  -moz-transition: width, 0.5s linear;
-  -ms-transition: width, 0.5s linear;
-  -o-transition: width, 0.5s linear;
-  transition: width, 0.5s linear;
+  -webkit-transition:width, 0.6s linear;
+  -moz-transition: width, 0.6s linear;
+  -ms-transition: width, 0.6s linear;
+  -o-transition: width, 0.6s linear;
+  transition: width, 0.6s linear;
 }
 
 .mobile-menu.open {
@@ -217,11 +217,11 @@
     background: white;
     top: 0;
     height: 100%;
-    -webkit-transition:width, 0.5s linear;
-    -moz-transition: width, 0.5s linear;
-    -ms-transition: width, 0.5s linear;
-    -o-transition: width, 0.5s linear;
-    transition: width, 0.5s linear;
+    -webkit-transition:width, 0.6s linear;
+    -moz-transition: width, 0.6s linear;
+    -ms-transition: width, 0.6s linear;
+    -o-transition: width, 0.6s linear;
+    transition: width, 0.6s linear;
 }
 
 @-webkit-keyframes slide {
