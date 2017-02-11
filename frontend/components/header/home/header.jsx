@@ -3,6 +3,19 @@ import MediaQuery from 'react-responsive';
 import {  Link } from 'react-router';
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {active: false, class: 'mobile-menu'};
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    if(this.state.active){
+      this.setState({active: false, class: 'mobile-menu'});
+    }else{
+      this.setState({active: true, class: 'active'});
+    }
+  }
 
   mediaHeader (type) {
     if (type === "desktop") {
@@ -61,25 +74,26 @@ class Header extends React.Component {
       return (
         <header>
           <div className="mobile-header-content">
-            <span className="fa fa-bars"></span>
+            <span className="fa fa-bars" onClick={() => this.handleClick()}></span>
             <Link to="/">
               <img className="header-image" src="http://res.cloudinary.com/dmow8kfvt/image/upload/v1483481411/CC-UM-Vertical_nsoikb.png" />
             </Link>
             <div className="blank"></div>
           </div>
 
-          <ul className="mobile-menu">
-            <li><span>HOME</span></li>
-          <li><Link to="/visit">VISIT</Link></li>
-          <li><div className="mobile-about">
-              <span>ABOUT</span>
+          <div className={this.state.class}>
+            <ul className="mobile-links">
+              <li><span>HOME</span></li>
+              <li><Link to="/visit">VISIT</Link></li>
+              <li><div className="mobile-about">
+                <span>ABOUT</span>
                 <ul className="about-mobile">
                   <a href="/#/staff"><li>STAFF</li></a>
                   <a href="/#/mission"><li>MISSION</li></a>
                 </ul>
-            </div></li>
-            <li><div className="mobile-connect">
-              <span>CONNECT</span>
+              </div></li>
+              <li><div className="mobile-connect">
+                <span>CONNECT</span>
                 <ul className="connect-mobile">
                   <a href="/children"><li>CHILDREN</li></a>
                   <a href="/youth"><li>YOUTH</li></a>
@@ -89,27 +103,29 @@ class Header extends React.Component {
                   <a href="/missions"><li>MISSIONS</li></a>
                   <a href="/care"><li>CARE</li></a>
                 </ul>
-            </div></li>
-            <li><div className="mobile-next-step">
-              <span>NEXT STEPS</span>
+              </div></li>
+              <li><div className="mobile-next-step">
+                <span>NEXT STEPS</span>
                 <ul className="next-step-mobile">
                   <a href="/volunteer"><li>VOLUNTEER</li></a>
                   <a href="/baptism"><li>BAPTISM</li></a>
                   <a href="/membership"><li>MEMBERSHIP</li></a>
                   <a href="/salt"><li>LEADERSHIP TRAINING (SALT)</li></a>
                 </ul>
-            </div></li>
-            <li><div className="mobile-daycare">
-              <span>CHILD CARE</span>
+              </div></li>
+              <li><div className="mobile-daycare">
+                <span>CHILD CARE</span>
                 <ul className="daycare-mobile">
                   <a href="/little-learners"><li>LITTLE LEARNERS</li></a>
                   <a href="/little-scholars"><li>LITTLE SCHOLARS</li></a>
                 </ul>
-            </div></li>
-          <li><a>SERMONS</a></li>
-            <li><a>CONTACT</a></li>
-            <li><a href="https://thecompasschurch.ccbchurch.com/trx_give.php">GIVE</a></li>
-          </ul>
+              </div></li>
+              <li><a>SERMONS</a></li>
+              <li><a>CONTACT</a></li>
+              <li><a href="https://thecompasschurch.ccbchurch.com/trx_give.php">GIVE</a></li>
+            </ul>
+            <div className="mobile-link-close" onClick={() => this.handleClick()}></div>
+          </div>
         </header>
       );
     }

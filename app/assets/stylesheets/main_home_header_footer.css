@@ -199,29 +199,37 @@
 }
 
 .mobile-menu {
-  width: 0%;
-  display: none;
-  -webkit-transition:width, 0.5s linear;
-  -moz-transition: width, 0.5s linear;
-  -ms-transition: width, 0.5s linear;
-  -o-transition: width, 0.5s linear;
-  transition: width, 0.5s linear;
+  left:-100%;
+  position: absolute;
+  -webkit-transition:width, .4s linear;
+  -moz-transition: width, .4s linear;
+  -ms-transition: width, .4s linear;
+  -o-transition: width, .4s linear;
+  transition: width, .4s linear;
 }
 
-.mobile-menu.open {
-    width:31%;
+.active {
+    width:100%;
     position: absolute;
     display: flex;
-    flex-direction: column;
-    padding: 30px;
-    background: white;
     top: 0;
+    left: 0;
     height: 100%;
-    -webkit-transition:width, 0.5s linear;
-    -moz-transition: width, 0.5s linear;
-    -ms-transition: width, 0.5s linear;
-    -o-transition: width, 0.5s linear;
-    transition: width, 0.5s linear;
+    -webkit-transition:width, .4s linear;
+    -moz-transition: width, .4s linear;
+    -ms-transition: width, .4s linear;
+    -o-transition: width, .4s linear;
+    transition: width, .4s linear;
+}
+
+.mobile-links {
+  width: 35%;
+  background: white;
+  padding: 30px;
+}
+
+.mobile-link-close {
+  width: 64%
 }
 
 @-webkit-keyframes slide {
@@ -252,7 +260,7 @@
   display: none;
 }
 
-.mobile-menu > li {
+.mobile-links > li {
   padding: 40px 25px;
   font-size: 40px;
   font-weight: 300;
