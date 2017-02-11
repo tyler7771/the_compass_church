@@ -189,13 +189,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 110px;
+  height: 200px;
   font-size: 18px;
 }
 
 .mobile-header-content > span {
-  font-size: 50px;
+  font-size: 90px;
   float: left;
+}
+
+.mobile-header-image {
+  height: 170px;
 }
 
 .mobile-menu {
@@ -241,7 +245,7 @@
 }
 
 .blank {
-  width: 42px;
+  width: 77px;
 }
 
 .about-mobile {

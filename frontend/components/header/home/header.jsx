@@ -76,7 +76,7 @@ class Header extends React.Component {
           <div className="mobile-header-content">
             <span className="fa fa-bars" onClick={() => this.handleClick()}></span>
             <Link to="/">
-              <img className="header-image" src="http://res.cloudinary.com/dmow8kfvt/image/upload/v1483481411/CC-UM-Vertical_nsoikb.png" />
+              <img className="mobile-header-image" src="http://res.cloudinary.com/dmow8kfvt/image/upload/v1483481411/CC-UM-Vertical_nsoikb.png" />
             </Link>
             <div className="blank"></div>
           </div>
