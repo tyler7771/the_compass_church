@@ -5,15 +5,77 @@ import {  Link } from 'react-router';
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {active: false, class: 'mobile-menu'};
+    this.state = {active: false,
+                  class: 'mobile-menu',
+                  aboutActive: false,
+                  aboutClass: 'about-closed',
+                  connectActive: false,
+                  connectClass: 'connect-closed',
+                  nextStepActive: false,
+                  nextStepClass: 'next-step-closed',
+                  daycareActive: false,
+                  daycareClass: 'daycare-closed'};
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    if(this.state.active){
-      this.setState({active: false, class: 'mobile-menu'});
-    }else{
+  handleClick(type) {
+    if(type === "open"){
       this.setState({active: true, class: 'active'});
+    } else if (type === "close") {
+      this.setState({active: false,
+                    class: 'mobile-menu',
+                    aboutActive: false,
+                    aboutClass: 'about-closed',
+                    connectActive: false,
+                    connectClass: 'connect-closed',
+                    nextStepActive: false,
+                    nextStepClass: 'next-step-closed',
+                    daycareActive: false,
+                    daycareClass: 'daycare-closed'});
+    } else if (type === "about" && this.state.aboutActive === false) {
+      this.setState({aboutActive: true,
+                    aboutClass: 'about-opened',
+                    connectActive: false,
+                    connectClass: 'connect-closed',
+                    nextStepActive: false,
+                    nextStepClass: 'next-step-closed',
+                    daycareActive: false,
+                    daycareClass: 'daycare-closed'});
+    } else if (type === "about" && this.state.aboutActive === true) {
+      this.setState({aboutActive: false, aboutClass: 'about-closed'});
+    } else if (type === "connect" && this.state.connectActive === false) {
+      this.setState({connectActive: true,
+                    connectClass: 'connect-opened',
+                    aboutActive: false,
+                    aboutClass: 'about-closed',
+                    nextStepActive: false,
+                    nextStepClass: 'next-step-closed',
+                    daycareActive: false,
+                    daycareClass: 'daycare-closed'});
+    } else if (type === "connect" && this.state.connectActive === true) {
+      this.setState({connectActive: false, connectClass: 'about-closed'});
+    } else if (type === "nextStep" && this.state.nextStepActive === false) {
+      this.setState({nextStepActive: true,
+                    nextStepClass: 'next-step-opened',
+                    aboutActive: false,
+                    aboutClass: 'about-closed',
+                    connectActive: false,
+                    connectClass: 'connect-closed',
+                    daycareActive: false,
+                    daycareClass: 'daycare-closed'});
+    } else if (type === "nextStep" && this.state.nextStepActive === true) {
+      this.setState({nextStepActive: false, connectClass: 'about-closed'});
+    } else if (type === "daycare" && this.state.nextStepActive === false) {
+      this.setState({daycareActive: true,
+                    daycareClass: 'daycare-opened',
+                    nextStepActive: false,
+                    nextStepClass: 'next-step-closed',
+                    aboutActive: false,
+                    aboutClass: 'about-closed',
+                    connectActive: false,
+                    connectClass: 'connect-closed',});
+    } else if (type === "daycare" && this.state.nextStepActive === true) {
+      this.setState({nextStepActive: false, connectClass: 'about-closed'});
     }
   }
 
@@ -74,7 +136,7 @@ class Header extends React.Component {
       return (
         <header>
           <div className="mobile-header-content">
-            <span className="fa fa-bars" onClick={() => this.handleClick()}></span>
+            <span className="fa fa-bars" onClick={() => this.handleClick("open")}></span>
             <Link to="/">
               <img className="mobile-header-image" src="https://res.cloudinary.com/dmow8kfvt/image/upload/v1483481411/CC-UM-Vertical_nsoikb.png" />
             </Link>
@@ -82,49 +144,49 @@ class Header extends React.Component {
           </div>
 
           <div className={this.state.class}>
-            <ul className="mobile-links">
-              <li><span>HOME</span></li>
-              <li><Link to="/visit">VISIT</Link></li>
-              <li><div className="mobile-about">
+            <div className="mobile-links">
+              <Link to="/" onClick={() => this.handleClick("close")}>HOME</Link>
+              <Link to="/visit" onClick={() => this.handleClick("close")}>VISIT</Link>
+              <span onClick={() => this.handleClick("about")}><div className="mobile-about">
                 <span>ABOUT</span>
-                <ul className="about-mobile">
-                  <a href="/#/staff"><li>STAFF</li></a>
-                  <a href="/#/mission"><li>MISSION</li></a>
-                </ul>
-              </div></li>
-              <li><div className="mobile-connect">
+                <div className={this.state.aboutClass}>
+                  <Link to="/staff" onClick={() => this.handleClick("close")}>STAFF</Link>
+                  <Link to="/mission" onClick={() => this.handleClick("close")}>MISSION</Link>
+                </div>
+              </div></span>
+            <span onClick={() => this.handleClick("connect")}><div className="mobile-connect">
                 <span>CONNECT</span>
-                <ul className="connect-mobile">
-                  <a href="/children"><li>CHILDREN</li></a>
-                  <a href="/youth"><li>YOUTH</li></a>
-                  <a href="/camps"><li>CAMPS</li></a>
-                  <a href="/young-adults"><li>YOUNG ADULTS</li></a>
-                  <a href="/life-groups"><li>LIFE GROUPS</li></a>
-                  <a href="/missions"><li>MISSIONS</li></a>
-                  <a href="/care"><li>CARE</li></a>
-                </ul>
-              </div></li>
-              <li><div className="mobile-next-step">
+                <div className={this.state.connectClass}>
+                  <Link to="/children" onClick={() => this.handleClick("close")}>CHILDREN</Link>
+                  <Link to="/youth" onClick={() => this.handleClick("close")}>YOUTH</Link>
+                  <Link to="/camps" onClick={() => this.handleClick("close")}>CAMPS</Link>
+                  <Link to="/young-adults" onClick={() => this.handleClick("close")}>YOUNG ADULTS</Link>
+                  <Link to="/life-groups" onClick={() => this.handleClick("close")}>LIFE GROUPS</Link>
+                  <Link to="/missions" onClick={() => this.handleClick("close")}>MISSIONS</Link>
+                  <Link to="/care" onClick={() => this.handleClick("close")}>CARE</Link>
+                </div>
+              </div></span>
+              <span onClick={() => this.handleClick("nextStep")}><div className="mobile-next-step">
                 <span>NEXT STEPS</span>
-                <ul className="next-step-mobile">
-                  <a href="/volunteer"><li>VOLUNTEER</li></a>
-                  <a href="/baptism"><li>BAPTISM</li></a>
-                  <a href="/membership"><li>MEMBERSHIP</li></a>
-                  <a href="/salt"><li>LEADERSHIP TRAINING (SALT)</li></a>
-                </ul>
-              </div></li>
-              <li><div className="mobile-daycare">
+                <div className={this.state.nextStepClass}>
+                  <Link to="/volunteer" onClick={() => this.handleClick("close")}>VOLUNTEER</Link>
+                  <Link to="/baptism" onClick={() => this.handleClick("close")}>BAPTISM</Link>
+                  <Link to="/membership" onClick={() => this.handleClick("close")}>MEMBERSHIP</Link>
+                  <Link to="/salt" onClick={() => this.handleClick("close")}>LEADERSHIP TRAINING (SALT)</Link>
+                </div>
+              </div></span>
+              <span onClick={() => this.handleClick("daycare")}><div className="mobile-daycare">
                 <span>CHILD CARE</span>
-                <ul className="daycare-mobile">
-                  <a href="/little-learners"><li>LITTLE LEARNERS</li></a>
-                  <a href="/little-scholars"><li>LITTLE SCHOLARS</li></a>
-                </ul>
-              </div></li>
-              <li><a>SERMONS</a></li>
-              <li><a>CONTACT</a></li>
-              <li><a href="https://thecompasschurch.ccbchurch.com/trx_give.php">GIVE</a></li>
-            </ul>
-            <div className="mobile-link-close" onClick={() => this.handleClick()}></div>
+                <div className={this.state.daycareClass}>
+                  <Link to="/little-learners" onClick ={ () => this.handleClick("close")}>LITTLE LEARNERS</Link>
+                  <Link to="/little-scholars" onClick ={ () => this.handleClick("close")}>LITTLE SCHOLARS</Link>
+                </div>
+              </div></span>
+              <Link to ="/sermons">SERMONS</Link>
+              <Link to ="/contact">CONTACT</Link>
+              <a href="https://thecompasschurch.ccbchurch.com/trx_give.php">GIVE</a>
+            </div>
+            <div className="mobile-link-close" onClick={() => this.handleClick("close")}></div>
           </div>
         </header>
       );

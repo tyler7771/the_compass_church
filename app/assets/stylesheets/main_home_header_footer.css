@@ -227,6 +227,8 @@
 }
 
 .mobile-links {
+  display: flex;
+  flex-direction: column;
   width: 35%;
   background: white;
   padding: 30px;
@@ -248,23 +250,114 @@
   width: 77px;
 }
 
-.about-mobile {
+.mobile-about, .mobile-connect, .mobile-next-step, .mobile-daycare {
+  position: relative;
+}
+
+.about-closed, .connect-closed, .next-step-closed, .daycare-closed {
   display: none;
 }
 
-.connect-mobile {
-  display: none;
+.about-opened {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 120%;
+  top: -75%;
+  background: white;
+  width: 100%;
+  padding: 0 30px;
+  border-left: 1px solid grey;
 }
 
-.next-step-mobile {
-  display: none;
+.about-opened > a {
+  padding: 40px 25px;
+  font-size: 40px;
+  font-weight: 300;
+  border-bottom: 1px solid grey;
 }
 
-.daycare-mobile {
-  display: none;
+.connect-opened {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 120%;
+  top: -575%;
+  background: white;
+  width: 130%;
+  padding: 0 30px;
+  border-left: 1px solid grey;
 }
 
-.mobile-links > li {
+.connect-opened > a {
+  padding: 40px 25px;
+  font-size: 40px;
+  font-weight: 300;
+  border-bottom: 1px solid grey;
+}
+
+.connect-opened > a:last-child {
+  border-bottom: none;
+}
+
+.about-opened > a:last-child {
+  border-bottom: none;
+}
+
+.next-step-opened {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 120%;
+  top: -325%;
+  background: white;
+  width: 130%;
+  padding: 0 30px;
+  border-left: 1px solid grey;
+}
+
+.next-step-opened > a {
+  padding: 40px 25px;
+  font-size: 40px;
+  font-weight: 300;
+  border-bottom: 1px solid grey;
+}
+
+.next-step-opened > a:last-child {
+  border-bottom: none;
+}
+
+.daycare-opened {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 120%;
+  top: -75%;
+  background: white;
+  width: 150%;
+  padding: 0 30px;
+  border-left: 1px solid grey;
+}
+
+.daycare-opened > a {
+  padding: 40px 25px;
+  font-size: 40px;
+  font-weight: 300;
+  border-bottom: 1px solid grey;
+}
+
+.daycare-opened > a:last-child {
+  border-bottom: none;
+}
+
+.mobile-links > span {
+  padding: 40px 25px;
+  font-size: 40px;
+  font-weight: 300;
+  border-bottom: 1px solid grey;
+}
+
+.mobile-links > a {
   padding: 40px 25px;
   font-size: 40px;
   font-weight: 300;
