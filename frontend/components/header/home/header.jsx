@@ -64,8 +64,8 @@ class Header extends React.Component {
                     daycareActive: false,
                     daycareClass: 'daycare-closed'});
     } else if (type === "nextStep" && this.state.nextStepActive === true) {
-      this.setState({nextStepActive: false, connectClass: 'about-closed'});
-    } else if (type === "daycare" && this.state.nextStepActive === false) {
+      this.setState({nextStepActive: false, nextStepClass: 'next-step-closed'});
+    } else if (type === "daycare" && this.state.daycareActive === false) {
       this.setState({daycareActive: true,
                     daycareClass: 'daycare-opened',
                     nextStepActive: false,
@@ -74,8 +74,8 @@ class Header extends React.Component {
                     aboutClass: 'about-closed',
                     connectActive: false,
                     connectClass: 'connect-closed',});
-    } else if (type === "daycare" && this.state.nextStepActive === true) {
-      this.setState({nextStepActive: false, connectClass: 'about-closed'});
+    } else if (type === "daycare" && this.state.daycareActive === true) {
+      this.setState({daycareActive: false, daycareClass: 'daycare-closed'});
     }
   }
 
