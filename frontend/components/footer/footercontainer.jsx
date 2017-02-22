@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Youth from './youth';
+import Footer from './footer';
 import { logout } from '../../actions/session_actions';
 
 
@@ -8,10 +8,10 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-
+  logout: () => dispatch(logout())
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Youth);
+)(Footer);

@@ -21,7 +21,7 @@ export default ({ getState, dispatch }) => next => action => {
       return next(action);
     case LOGOUT:
       logout(() => {
-        hashHistory.push("/welcome");
+        hashHistory.push("/");
         next(action);
       });
       break;

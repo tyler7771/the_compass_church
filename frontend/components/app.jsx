@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import HomeHeader from './header/home/header';
-import Footer from './footer/footer';
+import Footer from './footer/footercontainer';
 
 const App = ({ children }) => (
   <div className="app">

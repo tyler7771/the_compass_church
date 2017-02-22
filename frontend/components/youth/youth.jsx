@@ -6,17 +6,37 @@ class Youth extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {locationDetails: "none"};
+    this.state = {youthGroup: "none"};
   }
 
   handleButton (e, button) {
     e.preventDefault();
     if (button === "selma") {
-      this.setState({locationDetails: "selma"});
+      this.setState({youthGroup: "selma"});
     } else if (button === "winchester") {
-      this.setState({locationDetails: "winchester"});
+      this.setState({youthGroup: "winchester"});
     } else if (button === "yorktown") {
-      this.setState({locationDetails: "yorktown"});
+      this.setState({youthGroup: "yorktown"});
+    }
+  }
+
+  youthSchedule() {
+    if (this.state.youthGroup === "none") {
+      return (
+        <div className="no-details"></div>
+      );
+    } else if (this.state.youthGroup === "selma") {
+      return (
+        <span>selma</span>
+      );
+    } else if (this.state.youthGroup === "winchester") {
+      return (
+        <span>winchester</span>
+      );
+    } else if (this.state.youthGroup === "yorktown") {
+      return (
+        <span>yorktown</span>
+      );
     }
   }
 
@@ -48,25 +68,7 @@ class Youth extends React.Component {
               </div>
             </a>
           </div>
-          {this.locationInfo()}
-        </div>
-        <div className="what-to-expect">
-          <h2>WHAT TO EXPECT</h2>
-          <div className="what-to-expect-content">
-            <div className="what-to-expect-image"></div>
-            <div className="what-to-expect-text">
-              <p>We believe that God has the power to change lives – and we have seen Him do just that. Marriages are being restored, addictions overcome, and people are taking steps toward reaching their full potential in Christ. Our desire is that here at The Compass Church, you’ll experience these things for yourself.</p>
-              <br/>
-              <p>What can you expect at The Compass Church:</p>
-              <br/>
-              <ul>
-                <li>&ensp;• A warm welcome from friendly faces</li>
-                <li>&ensp;• Environments for every age</li>
-                <li>&ensp;• Engaging worship and a Relevant message</li>
-              </ul>
-          </div>
-          </div>
-
+          {this.youthSchedule()}
         </div>
       </div>
     );
