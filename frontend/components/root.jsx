@@ -9,7 +9,7 @@ import SelmaVisit from './visit/selmavisit';
 import WinchesterVisit from './visit/winchestervisit';
 import YorktownVisit from './visit/yorktownvisit';
 import Mission from './mission/mission';
-import Youth from './youth/youth';
+import Youth from './youth/youthcontainer';
 import Login from './login/login_container';
 
 const Root = ({ store }) => {

@@ -1,12 +1,15 @@
 import React from 'react';
-import CampusMap from '../map/map';
-import { hashHistory, withRouter, Link } from 'react-router';
+import MediaQuery from 'react-responsive';
 
 class Youth extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {youthGroup: "none"};
+  }
+
+  componentDidMount() {
+    this.props.fetchSchedules();
   }
 
   handleButton (e, button) {
@@ -20,23 +23,78 @@ class Youth extends React.Component {
     }
   }
 
-  youthSchedule() {
+  youthSchedule(type) {
+    const schedules = this.props.schedules;
     if (this.state.youthGroup === "none") {
       return (
         <div className="no-details"></div>
       );
     } else if (this.state.youthGroup === "selma") {
-      return (
-        <a href="http://res.cloudinary.com/dmow8kfvt/image/upload/v1487754374/Selma_Youth_Schedule.pdf" target="_blank" className="download-button">DOWNLOAD SCHEDULE</a>
-      );
+      if (type === "desktop") {
+        return (
+          <div>
+            <a href={schedules[0].pdf_link} target="_blank" className="download-button">DOWNLOAD SELMA SCHEDULE</a>
+            <div className="youth-schedule-container">
+              <img className="youth-schedule-img" src={schedules[0].img1} />
+              <img className="youth-schedule-img" src={schedules[0].img2} />
+            </div>
+          </div>
+        );
+      } else {
+        return (
+          <div>
+            <a href={schedules[0].pdf_link} target="_blank" className="download-button">DOWNLOAD SELMA SCHEDULE</a>
+            <div className="youth-schedule-container-mobile">
+              <img className="youth-schedule-img-mobile" src={schedules[0].img1} />
+              <img className="youth-schedule-img-mobile" src={schedules[0].img2} />
+            </div>
+          </div>
+        );
+      }
     } else if (this.state.youthGroup === "winchester") {
-      return (
-        <a href="http://res.cloudinary.com/dmow8kfvt/image/upload/v1487754374/Selma_Youth_Schedule.pdf" target="_blank" className="download-button">DOWNLOAD SCHEDULE</a>
-      );
+      if (type === "desktop") {
+        return (
+          <div>
+            <a href={schedules[1].pdf_link} target="_blank" className="download-button">DOWNLOAD WINCHESTER SCHEDULE</a>
+            <div className="youth-schedule-container">
+              <img className="youth-schedule-img" src={schedules[1].img1} />
+              <img className="youth-schedule-img" src={schedules[1].img2} />
+            </div>
+          </div>
+        );
+      } else {
+        return (
+          <div>
+            <a href={schedules[1].pdf_link} target="_blank" className="download-button">DOWNLOAD WINCHESTER SCHEDULE</a>
+            <div className="youth-schedule-container-mobile">
+              <img className="youth-schedule-img-mobile" src={schedules[1].img1} />
+              <img className="youth-schedule-img-mobile" src={schedules[1].img2} />
+            </div>
+          </div>
+        );
+      }
     } else if (this.state.youthGroup === "yorktown") {
-      return (
-        <a href="http://res.cloudinary.com/dmow8kfvt/image/upload/v1487755204/Yorktown_Schedule_zzqvsb.pdf" target="_blank" className="download-button">DOWNLOAD SCHEDULE</a>
-      );
+      if (type === "desktop") {
+        return (
+          <div>
+            <a href={schedules[2].pdf_link} target="_blank" className="download-button">DOWNLOAD YORKTOWN SCHEDULE</a>
+            <div className="youth-schedule-container">
+                <img className="youth-schedule-img" src={schedules[2].img1} />
+                <img className="youth-schedule-img" src={schedules[2].img2} />
+              </div>
+          </div>
+        );
+      } else {
+        return (
+          <div>
+            <a href={schedules[2].pdf_link} target="_blank" className="download-button">DOWNLOAD YORKTOWN SCHEDULE</a>
+            <div className="youth-schedule-container-mobile">
+              <img className="youth-schedule-img-mobile" src={schedules[2].img1} />
+              <img className="youth-schedule-img-mobile" src={schedules[2].img2} />
+            </div>
+          </div>
+        );
+      }
     }
   }
 
@@ -68,7 +126,12 @@ class Youth extends React.Component {
               </div>
             </a>
           </div>
-          {this.youthSchedule()}
+          <MediaQuery query='(min-device-width: 1224px)'>
+            {this.youthSchedule("desktop")}
+          </MediaQuery>
+          <MediaQuery query='(max-device-width: 1224px)'>
+            {this.youthSchedule("mobile")}
+          </MediaQuery>
         </div>
       </div>
     );

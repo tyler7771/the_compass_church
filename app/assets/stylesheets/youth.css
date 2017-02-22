@@ -11,8 +11,9 @@
 }
 
 .download-button {
-  width: 30%;
-  margin: 20px auto;
+  padding: 5px 40px;
+  width: 40%;
+  margin: 60px auto;
   height: 40px;
   border-radius: 10px;
   background: transparent;
@@ -28,4 +29,29 @@
 .download-button:hover {
   color: white;
   background: #E20F28;
+}
+
+.youth-schedule-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.youth-schedule-img {
+  width: 47%;
+  height: 100%;
+}
+
+.youth-schedule-container-mobile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+}
+
+.youth-schedule-img-mobile {
+  width: 95%;
+  height: 100%;
+  margin-bottom: 30px;
 }
