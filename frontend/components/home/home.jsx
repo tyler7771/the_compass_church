@@ -1,7 +1,7 @@
 import React from 'react';
 import { hashHistory, withRouter, Link } from 'react-router';
 
-class Welcome extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
 
@@ -41,4 +41,4 @@ class Welcome extends React.Component {
   }
 }
 
-export default Welcome;
+export default Home;

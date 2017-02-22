@@ -91,14 +91,14 @@ class Header extends React.Component {
               <Link to="/">HOME</Link>
               <Link to="/visit">VISIT</Link>
               <div className="header-about">
-                <Link to="/about">ABOUT</Link>
+                <a>ABOUT</a>
                   <ul className="about-dropdown">
                     <Link to="/staff"><li>STAFF</li></Link>
                     <Link to="/mission"><li>MISSION</li></Link>
                   </ul>
               </div>
               <div className="header-connect">
-                <Link to="/connect">CONNECT</Link>
+                <a>CONNECT</a>
                   <ul className="connect-dropdown">
                     <Link to="/children"><li>CHILDREN</li></Link>
                     <Link to="/youth"><li>YOUTH</li></Link>
@@ -110,7 +110,7 @@ class Header extends React.Component {
                   </ul>
               </div>
               <div className="header-next-step">
-                <Link to="/next-steps">NEXT STEPS</Link>
+                <a>NEXT STEPS</a>
                   <ul className="next-step-dropdown">
                     <Link to="/volunteer"><li>VOLUNTEER</li></Link>
                     <Link to="/baptism"><li>BAPTISM</li></Link>
