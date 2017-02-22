@@ -27,15 +27,15 @@ class Youth extends React.Component {
       );
     } else if (this.state.youthGroup === "selma") {
       return (
-        <span>selma</span>
+        <a href="http://res.cloudinary.com/dmow8kfvt/image/upload/v1487754374/Selma_Youth_Schedule.pdf" target="_blank" className="download-button">DOWNLOAD SCHEDULE</a>
       );
     } else if (this.state.youthGroup === "winchester") {
       return (
-        <span>winchester</span>
+        <a href="http://res.cloudinary.com/dmow8kfvt/image/upload/v1487754374/Selma_Youth_Schedule.pdf" target="_blank" className="download-button">DOWNLOAD SCHEDULE</a>
       );
     } else if (this.state.youthGroup === "yorktown") {
       return (
-        <span>yorktown</span>
+        <a href="http://res.cloudinary.com/dmow8kfvt/image/upload/v1487755204/Yorktown_Schedule_zzqvsb.pdf" target="_blank" className="download-button">DOWNLOAD SCHEDULE</a>
       );
     }
   }

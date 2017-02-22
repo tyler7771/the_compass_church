@@ -30,3 +30,24 @@ body, main, html {
 .content {
   flex: 1;
 }
+
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+}
+
+.login-form-box {
+  margin: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form > input {
+  margin: 2px;
+}

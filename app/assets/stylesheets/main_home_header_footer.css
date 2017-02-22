@@ -56,25 +56,41 @@
 .header-about:hover > .about-dropdown {
   opacity: 1;
   height: 75px;
-  transition: opacity .5s ease-out;
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
 }
 
 .header-daycare:hover > .daycare-dropdown {
   opacity: 1;
   height: 75px;
-  transition: opacity .5s ease-out;
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
 }
 
 .header-connect:hover > .connect-dropdown {
   opacity: 1;
   height: 240px;
-  transition: opacity .5s ease-out;
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
 }
 
 .header-next-step:hover > .next-step-dropdown {
   opacity: 1;
   height: 145px;
-  transition: opacity .5s ease-out;
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
 }
 
 .connect-dropdown, .daycare-dropdown {
@@ -93,6 +109,11 @@
   opacity: 0;
   height: 0;
   background: white;
+  visibility: hidden; /* hides sub-menu */
+  opacity: 0;
+  transform: translateY(-2em);
+  z-index: 1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
 
 .about-dropdown > a > li {

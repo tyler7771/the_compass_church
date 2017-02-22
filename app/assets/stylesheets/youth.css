@@ -9,3 +9,23 @@
 .yorktown-youth {
   background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/c_scale,h_350/v1487745780/14446111_10210616353782214_6603131281280999698_n_kdgzhn.jpg") center center no-repeat;
 }
+
+.download-button {
+  width: 30%;
+  margin: 20px auto;
+  height: 40px;
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid #E20F28;
+  color: #E20F28;
+  font-size: 20px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-button:hover {
+  color: white;
+  background: #E20F28;
+}
