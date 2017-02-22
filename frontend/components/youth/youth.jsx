@@ -104,6 +104,25 @@ class Youth extends React.Component {
         <div className="visit-header">
           <h2>YOUTH</h2>
         </div>
+        <div className="mission-and-vision">
+          <h2>OUR PURPOSE</h2>
+          <p className="youth-purpose-text">The Compass Church Youth Ministry is focused on teaching, equipping, and transitioning teens to become faithful Christian adults who serve God and others.</p>
+        </div>
+        <div className="what-to-expect">
+          <h2>OUR GOALS</h2>
+          <div className="what-to-expect-content">
+            <div className="youth-goals-image"></div>
+            <div className="youth-goals-text">
+              <ul className="youth-goals-points">
+                <li><strong className="youth-strong">F</strong>riends of Faith- To be a fellowship where teens develop lasting Christian friends.</li>
+                <li><strong className="youth-strong">O</strong>utward Focus- To look beyond ourselves in mission & evangelism with Christ’s Good News.</li>
+                <li><strong className="youth-strong">C</strong>hrist-like Lifestyle- To learn and practice the disciplines of faith that will make us like Jesus.</li>
+                <li><strong className="youth-strong">U</strong>pward Passion- To honor God through our group worship and private devotions.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
         <div className="locations">
           <h2>CHECK OUT WHAT OUR YOUTH ARE DOING</h2>
           <div className="campus-links">

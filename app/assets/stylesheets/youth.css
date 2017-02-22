@@ -1,3 +1,34 @@
+.youth-purpose-text {
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 50px;
+  text-align: center;
+  width: 70%;
+}
+
+.youth-goals-image {
+  background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/v1487763244/15965062_10211756903095234_2424725772864916255_n_xyur6g.jpg") center center no-repeat;
+  width: 30%;
+  height: 350px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.youth-goals-text {
+  width: 65%;
+  font-size: 20px;
+}
+
+.youth-goals-points > li {
+  padding-bottom: 10px;
+}
+
+.youth-strong {
+  font-size: 25px;
+}
+
 .selma-youth {
   background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/c_scale,h_350/v1487745784/Screen_Shot_2017-02-21_at_10.35.24_PM_smikzg.png") center center no-repeat;
 }
