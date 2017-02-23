@@ -29,11 +29,12 @@
 .selma-link > button:hover,
 .winchester-link > button:hover,
 .yorktown-link > button:hover,
-.selma-youth > button:hover, 
-.winchester-youth > button:hover, 
+.selma-youth > button:hover,
+.winchester-youth > button:hover,
 .yorktown-youth > button:hover {
   color: #E20F28;
   background: white;
+  cursor: pointer;
 }
 
 .no-details {

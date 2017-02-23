@@ -11,7 +11,7 @@ import { hashHistory } from 'react-router';
 export default ({ getState, dispatch }) => next => action => {
   const successCallback = (user) => {
    dispatch(receiveCurrentUser(user));
-   hashHistory.push("/");
+   hashHistory.push("/admin");
  };
   const errorCallback = xhr => dispatch(receiveErrors(xhr.responseJSON));
 

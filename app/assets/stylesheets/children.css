@@ -1,0 +1,27 @@
+.children-header {
+  background: linear-gradient(
+                     rgba(20,20,20, .1),
+                     rgba(20,20,20, .1)),
+                     url(http://res.cloudinary.com/dmow8kfvt/image/upload/v1487843633/DSC_2163-960x250_e4bfkl.jpg);
+  width: 100%;
+  height: 400px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.children-header > h2 {
+  font-size: 80px;
+  color: white;
+}
+
+.children-mission-text {
+  font-size: 20px;
+  padding-bottom: 50px;
+  text-align: center;
+  width: 90%
+}

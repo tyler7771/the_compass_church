@@ -101,7 +101,7 @@ class Youth extends React.Component {
   render () {
     return (
       <div className="visit">
-        <div className="visit-header">
+        <div className="youth-header">
           <h2>YOUTH</h2>
         </div>
         <div className="mission-and-vision">
@@ -118,30 +118,30 @@ class Youth extends React.Component {
                 <li><strong className="youth-strong">O</strong>utward Focus- To look beyond ourselves in mission & evangelism with Christ’s Good News.</li>
                 <li><strong className="youth-strong">C</strong>hrist-like Lifestyle- To learn and practice the disciplines of faith that will make us like Jesus.</li>
                 <li><strong className="youth-strong">U</strong>pward Passion- To honor God through our group worship and private devotions.</li>
+                <li><strong className="youth-strong">S</strong>ervants Heart- To do what it takes to minister to other believers in our church.</li>
               </ul>
             </div>
           </div>
-
         </div>
-        <div className="locations">
+        <div className="youth-locations">
           <h2>CHECK OUT WHAT OUR YOUTH ARE DOING</h2>
           <div className="campus-links">
             <a className="campus-link">
-              <div className="selma-youth">
+              <div className="selma-youth" onClick={ (e) => this.handleButton(e, "selma") }>
                 <div className="campus-title">SELMA</div>
-                <button onClick={ (e) => this.handleButton(e, "selma") }>YOUTH SCHEDULE</button>
+                <button>YOUTH SCHEDULE</button>
               </div>
             </a>
-            <a className="campus-link">
+            <a className="campus-link" onClick={ (e) => this.handleButton(e, "winchester")}>
               <div className="winchester-youth">
                 <div className="campus-title">WINCHESTER</div>
-                <button onClick={ (e) => this.handleButton(e, "winchester") }>YOUTH SCHEDULE</button>
+                <button>YOUTH SCHEDULE</button>
               </div>
             </a>
-            <a className="campus-link">
+            <a className="campus-link" onClick={ (e) => this.handleButton(e, "yorktown") }>
               <div className="yorktown-youth">
                 <div className="campus-title">YORKTOWN</div>
-                <button onClick={ (e) => this.handleButton(e, "yorktown") }>YOUTH SCHEDULE</button>
+                <button>YOUTH SCHEDULE</button>
               </div>
             </a>
           </div>
