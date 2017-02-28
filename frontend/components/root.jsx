@@ -11,6 +11,7 @@ import YorktownVisit from './visit/yorktownvisit';
 import Mission from './mission/mission';
 import Youth from './youth/youthcontainer';
 import Children from './children/children';
+import Camp from './camp/camp';
 import Login from './login/login_container';
 import Admin from './admin/admin_container';
 
@@ -39,6 +40,7 @@ const Root = ({ store }) => {
           <Route path="/mission" component={Mission} />
           <Route path="/youth" component={Youth} />
           <Route path="/children" component={Children} />
+          <Route path="/camps" component={Camp} />
         </Route>
       </Router>
     </Provider>

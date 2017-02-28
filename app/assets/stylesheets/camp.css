@@ -1,0 +1,128 @@
+.camp-header {
+  background: linear-gradient(
+                     rgba(20,20,20, .3),
+                     rgba(20,20,20, .3)),
+                     url(http://res.cloudinary.com/dmow8kfvt/image/upload/v1487986110/Camp-2016-99-e1481222607583_n9uysd.jpg);
+  width: 100%;
+  height: 400px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camp-header > h2 {
+  font-size: 80px;
+  color: white;
+}
+
+.camps {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.camps > h2 {
+  padding-bottom: 0;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.camp-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+
+.camp-link {
+  width: 30%;
+}
+
+.camp-link > div {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.camp-title {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+
+.camp-name {
+  color: white;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.camp-range {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.jump {
+  background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/c_scale,h_300/v1488263407/13599907_10209755689866154_5111776991576807243_n_ejaah7.jpg") center center no-repeat;
+}
+
+.summit {
+  background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/c_scale,h_300/v1487985203/13603832_714933135314591_6517633627221900236_o_dldfnf.jpg") center center no-repeat;
+}
+
+.rookie {
+  background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/c_scale,h_350/v1487745784/Screen_Shot_2017-02-21_at_10.35.24_PM_smikzg.png") center center no-repeat;
+}
+
+.boy-preteen {
+  background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/c_scale,h_350/v1487745784/Screen_Shot_2017-02-21_at_10.35.24_PM_smikzg.png") center center no-repeat;
+}
+
+.girl-preteen {
+  background: transparent url("http://res.cloudinary.com/dmow8kfvt/image/upload/c_scale,h_350/v1487745784/Screen_Shot_2017-02-21_at_10.35.24_PM_smikzg.png") center center no-repeat;
+}
+
+.camp-modal {
+  background: white;
+  border-radius: 10px;
+  outline: none;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.camp-modal-picture {
+  width: 96%;
+  height: 100%;
+}
+
+.camp-modal-info {
+  width: 96%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modal-date {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 22px;
+}
+
+.modal-age {
+  font-size: 20px;
+}
