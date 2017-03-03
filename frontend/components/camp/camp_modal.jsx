@@ -42,7 +42,7 @@ class StaffModal extends React.Component {
       this.age = "GIRLS ENTERING GRADES 4-5";
       this.img = "http://res.cloudinary.com/dmow8kfvt/image/upload/v1488270698/13533252_10209755691706200_5309149048554262465_n_bm2g1c.jpg";
       this.date = "JULY 19-22";
-      this.description = "Sue has been a member of The Compass Church since 1992. She volunteered in children’s ministries, worship team and small group ministry before joining the staff as Children’s Ministries Director in 2010. Serving children has been a part of her professional life, as well, having taught at Royerton Elementary for fifteen years. When Sue isn’t serving children, she enjoys spending time with her husband, Todd, and her children Caleb (wife Mallory) and Lauren (husband Cole).";
+      this.description = "Sue has been a member The Compass Church since 1992. She volunteered in children’s ministries, worship team and small group ministry before joining the staff as Children’s Ministries Director in 2010. Serving children has been a part of her professional life, as well, having taught at Royerton Elementary for fifteen years. When Sue isn’t serving children, she enjoys spending time with her husband, Todd, and her children Caleb (wife Mallory) and Lauren (husband Cole).";
     }
   }
 

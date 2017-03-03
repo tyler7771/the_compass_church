@@ -47,7 +47,7 @@ class Youth extends React.Component {
             <a className="camp-link">
               <div className="jump" onClick={ (e) => this.handleButton(e, "jump") }>
                 <div className="camp-title">
-                  <p className="camp-name">JUMP!</p>
+                  <p className="camp-namei">JUMP!</p>
                   <p className="camp-range">JR HIGH</p>
                 </div>
                 <button>CAMP DETAILS</button>
@@ -56,7 +56,7 @@ class Youth extends React.Component {
             <a className="camp-link" onClick={ (e) => this.handleButton(e, "summit")}>
               <div className="summit">
                 <div className="camp-title">
-                  <p className="camp-name">SUMMIT</p>
+                  <p className="camp-namei">SUMMIT</p>
                   <p className="camp-range">SR HIGH</p>
                 </div>
                 <button>CAMP DETAILS</button>
@@ -65,7 +65,7 @@ class Youth extends React.Component {
             <a className="camp-link" onClick={ (e) => this.handleButton(e, "rookie") }>
               <div className="rookie">
                 <div className="camp-title">
-                  <p className="camp-name">ROOKIE</p>
+                  <p className="camp-namei">ROOKIE</p>
                   <p className="camp-range">GRADES 2-3</p>
                 </div>
                 <button>CAMP DETAILS</button>
@@ -76,7 +76,7 @@ class Youth extends React.Component {
             <a className="camp-link">
               <div className="boy-preteen" onClick={ (e) => this.handleButton(e, "boyPreteen") }>
                 <div className="camp-title">
-                  <p className="camp-name">BOYS PRETEEN</p>
+                  <p className="camp-namei">BOYS PRETEEN</p>
                   <p className="camp-range">BOYS GRADES 4-5</p>
                 </div>
                 <button>CAMP DETAILS</button>
@@ -85,7 +85,7 @@ class Youth extends React.Component {
             <a className="camp-link" onClick={ (e) => this.handleButton(e, "girlPreteen")}>
               <div className="girl-preteen">
                 <div className="camp-title">
-                  <p className="camp-name">GIRLS PRETEEN</p>
+                  <p className="camp-namei">GIRLS PRETEEN</p>
                   <p className="camp-range">GIRLS GRADES 4-5</p>
                 </div>
                 <button>CAMP DETAILS</button>
