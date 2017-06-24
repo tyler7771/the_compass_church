@@ -196,7 +196,7 @@ header {
 .mobile-menu {
   position: absolute;
   transition: -webkit-transform 1s ease;
-  -webkit-transform: translateX(-100%);
+  -webkit-transform: translateX(-200%);
 }
 .active {
   position: fixed;
