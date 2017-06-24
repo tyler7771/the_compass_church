@@ -182,6 +182,7 @@ header {
 .mobile-header-content-active {
   position: fixed;
   top: 0;
+  left: 0;
 }
 
 .mobile-header-content > span {
@@ -198,6 +199,7 @@ header {
   transition: -webkit-transform 1s ease;
   -webkit-transform: translateX(-2000px);
 }
+
 .active {
   position: fixed;
   transition: -webkit-transform .5s ease;

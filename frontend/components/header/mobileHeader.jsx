@@ -66,7 +66,7 @@ class Header extends React.Component {
           <div className="blank"></div>
         </div>
 
-        <div className={this.state.class} style={{height: innerHeight - 200}}>
+        <div className={this.state.class} style={{height: $(window).height() - 200}}>
           <div className="mobile-links" >
             <Link to="/" onClick={() => this.handleClick("close")}>HOME</Link>
             <Link to="/visit" onClick={() => this.handleClick("close")}>VISIT</Link>
