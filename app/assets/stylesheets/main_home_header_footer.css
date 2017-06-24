@@ -182,7 +182,7 @@ header {
 .mobile-header-content-active {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 5%;
 }
 
 .mobile-header-content > span {
@@ -195,13 +195,11 @@ header {
 }
 
 .mobile-menu {
-  position: absolute;
   transition: -webkit-transform 1s ease;
   -webkit-transform: translateX(-2000px);
 }
 
 .active {
-  position: fixed;
   transition: -webkit-transform .5s ease;
   -webkit-transform: translateX(0px);
 }
@@ -231,6 +229,7 @@ header {
 }*/
 
 .mobile-menu, .active {
+  position: absolute;
   width:100%;
   display: flex;
   top: 200px;
@@ -238,6 +237,8 @@ header {
 }
 
 .mobile-links {
+  position: fixed;
+  left: 0;
   display: flex;
   flex-direction: column;
   width: 35%;
@@ -247,15 +248,7 @@ header {
 }
 
 .mobile-link-close {
-  width: 64%
-}
-
-@-webkit-keyframes slide {
-    100% { left: 0; }
-}
-
-@keyframes slide {
-    100% { left: 0; }
+  width: 59%;
 }
 
 .blank {
