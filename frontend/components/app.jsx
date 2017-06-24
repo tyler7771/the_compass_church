@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import HomeHeader from './header/home/header';
+import HomeHeader from './header/header';
 import Footer from './footer/footercontainer';
 
 const App = ({ children }) => (

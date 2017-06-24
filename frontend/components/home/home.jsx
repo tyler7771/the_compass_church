@@ -10,7 +10,7 @@ class Home extends React.Component {
   render () {
     return (
       <div>
-        <div className="splash-image">
+        <div className="splash-image" style={{height: innerHeight}}>
           <h1>WELCOME</h1>
         </div>
         <div className="locations">

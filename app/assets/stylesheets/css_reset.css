@@ -51,3 +51,8 @@ body, main, html {
 .login-form > input {
   margin: 2px;
 }
+
+.spacer {
+  height: 110px;
+  width: 100%;
+}
