@@ -63,8 +63,8 @@ class Header extends React.Component {
           <div className="blank"></div>
         </div>
 
-        <div className={this.state.class}>
-          <div className="mobile-links" style={{height: $(document).height()}}>
+        <div className={this.state.class} style={{height: $(document).height() - 200}}>
+          <div className="mobile-links" >
             <Link to="/" onClick={() => this.handleClick("close")}>HOME</Link>
             <Link to="/visit" onClick={() => this.handleClick("close")}>VISIT</Link>
             <span onClick={() => this.handleClick("about")}><div className="mobile-about">
@@ -88,8 +88,7 @@ class Header extends React.Component {
             <a href="https://thecompasschurch.ccbchurch.com/trx_give.php">GIVE</a>
           </div>
           <div className="mobile-link-close"
-            onClick={() => this.handleClick("close")}
-            style={{height: innerHeight}}>
+            onClick={() => this.handleClick("close")}>
           </div>
         </div>
       </header>
