@@ -169,7 +169,7 @@ header {
   cursor: default;
 }
 
-.mobile-header-content {
+.mobile-header-content, .mobile-header-content-active {
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -177,6 +177,11 @@ header {
   justify-content: space-between;
   height: 200px;
   font-size: 18px;
+}
+
+.mobile-header-content-active {
+  position: fixed;
+  top: 0;
 }
 
 .mobile-header-content > span {
@@ -189,28 +194,44 @@ header {
 }
 
 .mobile-menu {
+  transition: -webkit-transform 1s ease;
+  -webkit-transform: translateX(-100%);
+}
+.active {
+  transition: -webkit-transform .5s ease;
+  -webkit-transform: translateX(0%);
+}
+
+/*.mobile-menu {
   left:-100%;
   position: absolute;
-  -webkit-transition:width, .4s linear;
+  -webkit-transition: width, .4s linear;
   -moz-transition: width, .4s linear;
   -ms-transition: width, .4s linear;
   -o-transition: width, .4s linear;
   transition: width, .4s linear;
-}
+}*/
 
-.active {
+/*.active {
     width:100%;
     position: absolute;
     display: flex;
     top: 200px;
     z-index: 1;
     left: 0;
-    height: 100%;
-    -webkit-transition:width, .4s linear;
+    -webkit-transition: width, .4s linear;
     -moz-transition: width, .4s linear;
     -ms-transition: width, .4s linear;
     -o-transition: width, .4s linear;
     transition: width, .4s linear;
+}*/
+
+.mobile-menu, .active {
+  width:100%;
+  position: fixed;
+  display: flex;
+  top: 200px;
+  z-index: 1;
 }
 
 .mobile-links {

@@ -8,6 +8,7 @@ class Header extends React.Component {
     this.state = {active: false,
                   class: 'mobile-menu',
                   hamburgerClass: null,
+                  contentClass: 'mobile-header-content',
                   action: 'open',
                   aboutActive: false,
                   aboutClass: 'about-closed',
@@ -20,11 +21,13 @@ class Header extends React.Component {
     if(type === "open"){
       this.setState({active: true,
                     class: 'active',
+                    contentClass: 'mobile-header-content-active',
                     hamburgerClass: 'open',
                     action: 'close'});
     } else if (type === "close") {
       this.setState({active: false,
                     class: 'mobile-menu',
+                    contentClass: 'mobile-header-content',
                     hamburgerClass: null,
                     action: 'open',
                     aboutActive: false,
@@ -51,7 +54,7 @@ class Header extends React.Component {
   render () {
     return (
       <header>
-        <div className="mobile-header-content">
+        <div className={this.state.contentClass}>
           <div id="nav-icon1" className={this.state.hamburgerClass} onClick={() => this.handleClick(this.state.action)}>
             <span></span>
             <span></span>
@@ -63,7 +66,7 @@ class Header extends React.Component {
           <div className="blank"></div>
         </div>
 
-        <div className={this.state.class} style={{height: $(document).height() - 200}}>
+        <div className={this.state.class} style={{height: innerHeight - 200}}>
           <div className="mobile-links" >
             <Link to="/" onClick={() => this.handleClick("close")}>HOME</Link>
             <Link to="/visit" onClick={() => this.handleClick("close")}>VISIT</Link>
