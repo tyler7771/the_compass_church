@@ -195,11 +195,13 @@ header {
 }
 
 .mobile-menu {
+  position: absolute;
   transition: -webkit-transform 1s ease;
   -webkit-transform: translateX(-2000px);
 }
 
 .active {
+  position: fixed;
   transition: -webkit-transform .5s ease;
   -webkit-transform: translateX(0px);
 }
@@ -229,7 +231,6 @@ header {
 }*/
 
 .mobile-menu, .active {
-  position: absolute;
   width:100%;
   display: flex;
   top: 200px;
