@@ -9,13 +9,14 @@ class Footer extends React.Component {
   }
 
   handleLogin() {
+    const year = new Date().getFullYear();
     if (this.props.currentUser) {
       return (
         <button onClick={this.props.logout}>LOGOUT</button>
       );
     } else {
       return (
-        <p>Copyright <Link to="/login" className="login-link"><span className="fa fa-copyright"></span></Link> 2017 The Compass Church</p>
+        <p>Copyright <span className="fa fa-copyright"></span> {year} The Compass Church</p>
       );
     }
   }

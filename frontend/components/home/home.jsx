@@ -1,5 +1,6 @@
 import React from 'react';
 import { hashHistory, withRouter, Link } from 'react-router';
+import CampusLinks from '../visit/campuslinks';
 
 class Home extends React.Component {
   constructor(props) {
@@ -13,29 +14,8 @@ class Home extends React.Component {
         <div className="splash-image" style={{height: innerHeight}}>
           <h1>WELCOME</h1>
         </div>
-        <div className="locations">
-          <h2>OUR LOCATIONS</h2>
-          <div className="campus-links">
-            <Link to="/selma" className="campus-link">
-              <div className="selma-link">
-                <div className="campus-title">SELMA</div>
-                <div className="campus-details">CLICK FOR CAMPUS DETAILS</div>
-              </div>
-            </Link>
-            <Link to="/winchester" className="campus-link">
-              <div className="winchester-link">
-                <div className="campus-title">WINCHESTER</div>
-                <div className="campus-details">CLICK FOR CAMPUS DETAILS</div>
-              </div>
-            </Link>
-            <Link to="/yorktown" className="campus-link">
-              <div className="yorktown-link">
-                <div className="campus-title">YORKTOWN</div>
-                <div className="campus-details">CLICK FOR CAMPUS DETAILS</div>
-              </div>
-            </Link>
-          </div>
-        </div>
+        < CampusLinks />
+        <iframe src="https://player.vimeo.com/video/222980949?autoplay=1&color=E20F28&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     );
   }

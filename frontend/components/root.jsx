@@ -13,13 +13,15 @@ import Youth from './youth/youthcontainer';
 import Children from './children/children';
 import Login from './login/login_container';
 import Admin from './admin/admin_container';
+import SermonId from './admin/sermon/sermon_id_container';
+import CreateSermon from './admin/sermon/sermon_container';
 
 const Root = ({ store }) => {
 
   const _ensureLoggedIn = (nextState, replace) => {
     const currentUser = store.getState().session.currentUser;
     if (!currentUser) {
-      replace('/login');
+      replace('/admin/login');
     }
   };
 
@@ -29,8 +31,13 @@ const Root = ({ store }) => {
 
         <Route path="/" component={App}>
           <IndexRoute component={Home}/>
-          <Route path="/login" component={Login}/>
           <Route path="/admin" component={Admin} onEnter={_ensureLoggedIn}/>
+          <Route path="/admin/login" component={Login}/>
+          <Route
+            path="/admin/newsermon"
+            component={CreateSermon}
+            onEnter={_ensureLoggedIn}
+          />
           <Route path="/visit" component={Visit} />
           <Route path="/selma" component={SelmaVisit} />
           <Route path="/winchester" component={WinchesterVisit} />
