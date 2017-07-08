@@ -1,4 +1,5 @@
 import React from 'react';
+import { hashHistory } from 'react-router';
 
 const booksOfTheBible = [
       'Genesis','Exodus','Leviticus','Numbers','Deuteronomy','Joshua',
@@ -30,13 +31,24 @@ class SermonForm extends React.Component {
       dateMonth: '',
       dateDay: '',
       dateYear: '',
-      speaker: '',
+      speaker_id: '',
       book: '',
       verse: '',
-      series: ''
+      series_id: '',
+      seriesOpen: false,
+      speakerOpen: false,
+      newSeries: '',
+      newSpeaker: ''
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSeriesSubmit = this.handleSeriesSubmit.bind(this);
+    this.handleSpeakerSubmit = this.handleSpeakerSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.fetchSpeakers();
+    this.props.fetchSeriess();
   }
 
   update(field) {
@@ -48,8 +60,22 @@ class SermonForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let sermon = this.state;
-    sermon.date = `${this.state.dateMonth}-${this.state.dateDay}-${this.state.dateYear}`;
-    this.props.createSermon(this.state);
+    sermon.series_id = parseInt(this.state.series_id);
+    sermon.speaker_id = parseInt(this.state.speaker_id);
+    sermon.date = `${this.state.dateDay}-${this.state.dateMonth}-${this.state.dateYear}`;
+    this.props.createSermon({sermon: sermon});
+  }
+
+  handleSeriesSubmit(e) {
+    e.preventDefault();
+    this.props.createSeries({series: {name: this.state.newSeries}});
+    this.toggle('series');
+  }
+
+  handleSpeakerSubmit(e) {
+    e.preventDefault();
+    this.props.createSpeaker({speaker: {name: this.state.newSpeaker}});
+    this.toggle('speaker');
   }
 
   range(lowNum, highNum, type) {
@@ -68,9 +94,80 @@ class SermonForm extends React.Component {
     return result;
   }
 
+  toggle(field) {
+    if (field === 'speaker') {
+      this.setState({ speakerOpen: !this.state.speakerOpen });
+    } else {
+      this.setState({ seriesOpen: !this.state.seriesOpen });
+    }
+  }
+
+  toggleField(field) {
+    const capital = field[0].toUpperCase() + field.slice(1);
+    const addS = field + 's';
+    let conditional, newState, id, funct;
+
+    if (field === 'series') {
+      conditional = this.state.seriesOpen;
+      newState = 'newSeries';
+      id = 'series_id';
+      funct = this.handleSeriesSubmit;
+    } else {
+      conditional = this.state.speakerOpen;
+      newState = 'newSpeaker';
+      id = 'speaker_id';
+      funct = this.handleSpeakerSubmit;
+    }
+
+    if (conditional) {
+      return (
+        <div className={`${field}-container`}>
+          <input type="text"
+            placeholder="Name"
+            value={this.state[newState]}
+            onChange={this.update(`new${capital}`)}
+            className="new-input" />
+          <button className="new-submit" onClick={funct}>
+            {`Create ${capital}`}
+          </button>
+        </div>
+      );
+    } else {
+      return (
+        <div className={`${field}-container`}>
+          <div className={`sermon-form-section-container ${field}`}>
+            <select
+              className="select"
+              value={this.state[id]}
+              onChange={this.update(`${field}_id`)}>
+
+              <option>{capital}</option>
+
+              {
+                this.props[addS].map((obj) => (
+                  <option key={obj.id}
+                    value={obj.id}>{obj.name}
+                  </option>
+                ))
+              }
+            </select>
+            <i className="fa fa-caret-down absolute-icon"
+              aria-hidden="true">
+            </i>
+          </div>
+
+          <button className="new-sermon-button"
+            onClick={() => this.toggle(`${field}`)}>
+            New {capital}
+          </button>
+        </div>
+      );
+    }
+  }
+
   render() {
     return (
-      <form onSubmit={this.handleSubmit} className="sermon-form">
+      <div className="sermon-form">
         <div className="header-padding"></div>
         <h2>{this.state.title}</h2>
 
@@ -91,7 +188,6 @@ class SermonForm extends React.Component {
 
         <p>Title</p>
         <input type="text"
-          className="sermon-id-field"
           placeholder="Video Title"
           value={this.state.title}
           onChange={this.update("title")}
@@ -185,19 +281,28 @@ class SermonForm extends React.Component {
           </div>
 
           <input type="text"
-            className="sermon-id-field"
             placeholder="Verse"
             value={this.state.verse}
             onChange={this.update("verse")}
             className="sermon-input verse verse-input" />
         </div>
 
-        <input className="submit" type="submit" value="Create Sermon" />
-        <button className="remove-button"
-          onClick={this.props.removeSermonData}>
-          Incorrect Video
-        </button>
-      </form>
+        <p>Speaker</p>
+        {this.toggleField('speaker')}
+
+        <p>Series</p>
+        {this.toggleField('series')}
+
+        <div className="buttons-container">
+          <button className="submit"  onClick={this.handleSubmit}>
+            Create Sermon
+          </button>
+          <button className="remove-button"
+            onClick={this.props.removeSermonData}>
+            Incorrect Video
+          </button>
+        </div>
+      </div>
     );
   }
 

@@ -29,10 +29,9 @@ const SermonsMiddleware = ({ getState, dispatch }) => next => action => {
   let fetchSermonDataSuccess = sermon => dispatch(receiveSermonData(sermon[0]));
   let createSermonSuccess = sermon => {
     dispatch(receiveSermon(sermon));
-    hashHistory.push(`/coffee/${Object.keys(sermon)[0]}`);
+    hashHistory.push(`/admin`);
   };
   let removeSermonSuccess = id => {
-    hashHistory.push("/coffee");
     dispatch(removeSermon(id));
   };
 

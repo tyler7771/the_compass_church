@@ -8,7 +8,7 @@ class Api::SeriessController < ApplicationController
     @series = Series.new(series_params)
 
     if @series.save
-      render :index
+      render :show
     else
       render :json => { :errors => @series.errors.full_messages }, :status => 422
     end

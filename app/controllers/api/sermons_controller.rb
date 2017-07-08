@@ -6,10 +6,9 @@ class Api::SermonsController < ApplicationController
 
   def create
     @sermon = Sermon.new(sermon_params)
-    @sermon.date = Date.parse(sermon_params.date)
-    debugger
+    @sermon.date = Date.parse(params[:sermon][:date])
     if @sermon.save
-      render :index
+      render :show
     else
       render :json => { :errors => @sermon.errors.full_messages }, :status => 422
     end
@@ -19,7 +18,7 @@ class Api::SermonsController < ApplicationController
     @sermon = Sermon.find(params[:id])
 
     if @sermon.update_attributes(sermon_params)
-      render :index
+      render :show
     else
       render :json => { :errors => @sermon.errors.full_messages }, :status => 422
     end

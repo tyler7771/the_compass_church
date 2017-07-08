@@ -8,8 +8,10 @@
 
 .sermon-form > h2 {
   font-size: 50px;
-  padding: 20px;
+  margin: 10px 20px 20px;
   text-align: center;
+  line-height: 50px;
+  padding: 0;
 }
 
 .sermon-form > p {
@@ -30,7 +32,12 @@
   outline: none;
 }
 
-.sermon-id-submit, .new-image-button {
+.sermon-id-submit,
+.new-image-button,
+.new-sermon-button,
+.submit,
+.remove-button,
+.new-submit {
   font-size: 20px;
   width: 50%;
   background: white;
@@ -46,7 +53,12 @@
   margin-top: 10px;
 }
 
-.sermon-id-submit:hover, .new-image-button:hover {
+.sermon-id-submit:hover,
+.new-image-button:hover,
+.new-sermon-button:hover,
+.submit:hover,
+.remove-button:hover,
+.new-submit:hover {
   color: white;
   background: #E20F28;
 }
@@ -61,7 +73,7 @@
   width: 30%;
 }
 
-.sermon-input {
+.sermon-input, .new-input {
   width: 40%;
   padding: 5px;
   border-radius: 5px;
@@ -70,7 +82,7 @@
   text-align: center;
 }
 
-.date-container, .verse-container {
+.date-container, .verse-container, .speaker-container, .series-container {
   position: relative;
   display: flex;
   width: 40%;
@@ -103,7 +115,7 @@ select::-ms-expand {
 
 .absolute-icon {
   position: absolute;
-  top: 6px;
+  top: 9px;
   right: 7px;
 }
 
@@ -111,8 +123,46 @@ select::-ms-expand {
   width: 49%;
 }
 
-.verse-input {
+.submit, .remove-button {
+  width: 42%;
+}
+
+.verse-input, .new-input {
   margin-left: 2%;
   height: 17px;
   text-align: left;
+}
+
+.speaker, .series {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 74%;
+}
+
+.new-input {
+  width: 74%;
+}
+
+.new-sermon-button, .new-submit {
+  height: 20px;
+  font-size: 14px;
+  width: 24%;
+  margin-left: 2%;
+  padding: 3px 0;
+}
+
+.new-submit {
+  width: 30%
+}
+
+.buttons-container {
+  margin: 25px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit {
+  margin-left: 0;
 }

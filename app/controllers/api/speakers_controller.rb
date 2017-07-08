@@ -6,9 +6,8 @@ class Api::SpeakersController < ApplicationController
 
   def create
     @speaker = Speaker.new(speaker_params)
-
     if @speaker.save
-      render :index
+      render :show
     else
       render :json => { :errors => @speaker.errors.full_messages }, :status => 422
     end
