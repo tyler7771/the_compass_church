@@ -7,6 +7,15 @@ class SermonIndexItem extends React.Component {
 
   }
 
+  dateString() {
+    let date = new Date;
+    const splitDate = this.props.sermon.date.split('-');
+    date.setMonth(Number(splitDate[1]) - 1);
+    date.setFullYear(splitDate[0]);
+    date.setDate(splitDate[2]);
+    return date.toDateString().slice(4);
+  }
+
   render () {
     const sermon = this.props.sermon;
     return (
@@ -15,7 +24,7 @@ class SermonIndexItem extends React.Component {
         <p className='sermon-title'>{sermon.title}</p>
         <p>
           <i className="fa fa-calendar-o"></i>&nbsp;
-          {Date(sermon.date).slice(4, 15)}
+          {this.dateString()}
         </p>
         <p>
           <i className="fa fa-book"></i>&nbsp;
