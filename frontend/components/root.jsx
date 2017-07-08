@@ -5,6 +5,7 @@ import App from './app';
 import Home from './home/homecontainer';
 import Visit from './visit/visit';
 import Staff from './staff/main_staff';
+import Sermon from './sermon/sermon_index_container';
 import SelmaVisit from './visit/selmavisit';
 import WinchesterVisit from './visit/winchestervisit';
 import YorktownVisit from './visit/yorktownvisit';
@@ -43,6 +44,7 @@ const Root = ({ store }) => {
           <Route path="/winchester" component={WinchesterVisit} />
           <Route path="/yorktown" component={YorktownVisit} />
           <Route path="/staff" component={Staff} />
+          <Route path="/sermons" component={Sermon} />
           <Route path="/mission" component={Mission} />
           <Route path="/youth" component={Youth} />
           <Route path="/children" component={Children} />

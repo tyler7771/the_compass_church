@@ -25,7 +25,6 @@ import { hashHistory } from 'react-router';
 const SermonsMiddleware = ({ getState, dispatch }) => next => action => {
   const errorCallback = xhr => dispatch(receiveErrors(xhr.responseJSON));
   let fetchAllSermonsSuccess = sermons => dispatch(receiveAllSermons(sermons));
-  let fetchSermonSuccess = sermon => dispatch(receiveSermon(sermon));
   let fetchSermonDataSuccess = sermon => dispatch(receiveSermonData(sermon[0]));
   let createSermonSuccess = sermon => {
     dispatch(receiveSermon(sermon));
@@ -37,10 +36,7 @@ const SermonsMiddleware = ({ getState, dispatch }) => next => action => {
 
   switch (action.type) {
     case FETCH_SERMONS:
-      fetchSermons(fetchAllSermonsSuccess);
-      return next(action);
-    case FETCH_SERMON:
-      fetchSermon(action.params, fetchSermonSuccess);
+      fetchSermons(action.params, fetchAllSermonsSuccess);
       return next(action);
     case FETCH_SERMON_DATA:
       fetchSermonData(action.id, fetchSermonDataSuccess);

@@ -1,6 +1,14 @@
 class Api::SermonsController < ApplicationController
   def index
-    @sermons = Sermon.all
+    if  params[:params][:type] == 'series' && params[:params][:params] != 'Series'
+      @sermons = Sermon.includes(:speaker).where(series: params[:params][:params] ).order(:date)
+    elsif params[:params][:type] == 'speaker' && params[:params][:params] != 'Speaker'
+      @sermons = Sermon.includes(:speaker).where(speaker: params[:params][:params] ).order(:date)
+    elsif params[:params][:type] == 'book' && params[:params][:params] != 'Book'
+      @sermons = Sermon.includes(:speaker).where(book: params[:params][:params] ).order(:date)
+    else
+      @sermons = Sermon.includes(:speaker).all.order(:date)
+    end
     render :index
   end
 

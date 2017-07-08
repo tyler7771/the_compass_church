@@ -1,5 +1,4 @@
 export const FETCH_SERMONS = "FETCH_SERMONS";
-export const FETCH_SERMON = "FETCH_SERMON";
 export const RECEIVE_ALL_SERMONS = "RECEIVE_ALL_SERMONS";
 export const RECEIVE_SERMON = "RECEIVE_SERMON";
 export const REMOVE_SERMON = "REMOVE_SERMON";
@@ -12,12 +11,8 @@ export const REMOVE_SERMON_DATA = "REMOVE_SERMON_DATA";
 export const FETCH_SERMON_DATA = "FETCH_SERMON_DATA";
 export const RECEIVE_SERMON_DATA = "RECEIVE_SERMON_DATA";
 
-export const fetchSermons = () => ({
+export const fetchSermons = (params) => ({
   type: FETCH_SERMONS,
-});
-
-export const fetchSermon = (params) => ({
-  type: FETCH_SERMON,
   params
 });
 

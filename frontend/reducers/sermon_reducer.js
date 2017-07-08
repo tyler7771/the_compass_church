@@ -16,7 +16,7 @@ const _default = {
 const SermonsReducer = (oldState = _default, action) => {
   switch (action.type) {
     case RECEIVE_ALL_SERMONS:
-      return merge({}, oldState, {sermon: action.sermons});
+      return merge({}, {sermon: action.sermons});
     case RECEIVE_SERMON:
       return merge({}, oldState, {sermon: action.sermon, errors: []});
     case RECEIVE_SERMON_DATA:

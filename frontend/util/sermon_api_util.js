@@ -18,18 +18,10 @@ export const updateSermon = (sermon, success, error) => {
   });
 };
 
-export const fetchSermons = success => {
+export const fetchSermons = (params, success) => {
   $.ajax({
     method: "GET",
     url: "api/sermons",
-    success
-  });
-};
-
-export const fetchSermon = (params, success) => {
-  $.ajax({
-    method: "GET",
-    url: `api/sermons/${params.id}`,
     data: {params},
     success
   });
