@@ -64,6 +64,23 @@ class SermonForm extends React.Component {
     sermon.speaker_id = parseInt(this.state.speaker_id);
     sermon.date = `${this.state.dateDay}-${this.state.dateMonth}-${this.state.dateYear}`;
     this.props.createSermon({sermon: sermon});
+    this.setState({
+      url: this.props.sermonData.url,
+      title: this.props.sermonData.title,
+      image: this.props.sermonData.thumbnail_large,
+      dateMonth: '',
+      dateDay: '',
+      dateYear: '',
+      speaker_id: '',
+      book: '',
+      verse: '',
+      series_id: '',
+      seriesOpen: false,
+      speakerOpen: false,
+      newSeries: '',
+      newSpeaker: ''
+    });
+    this.props.removeSermonData();
   }
 
   handleSeriesSubmit(e) {
