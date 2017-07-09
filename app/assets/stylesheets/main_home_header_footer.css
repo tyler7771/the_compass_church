@@ -38,7 +38,7 @@ header {
 }
 
 .links > a:not(:last-child):hover {
-  color: #E20F28
+  color: #E20F28;
 }
 
 .header-about, .header-connect, .header-daycare {
@@ -49,16 +49,19 @@ header {
 .header-about:hover > a {
   color: #E20F28;
   cursor: default;
+  background: transparent;
 }
 
 .header-connect:hover > a {
   color: #E20F28;
   cursor: default;
+  background: transparent;
 }
 
 .header-daycare:hover > a {
   color: #E20F28;
   cursor: pointer;
+  background: transparent;
 }
 
 .header-about:hover > .about-dropdown {

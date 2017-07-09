@@ -4,7 +4,7 @@ import {
   receiveSermonData,
   removeSermon,
   FETCH_SERMONS,
-  FETCH_SERMON,
+  FETCH_LATEST_SERMON,
   FETCH_SERMON_DATA,
   CREATE_SERMON,
   UPDATE_SERMON,
@@ -17,7 +17,7 @@ import {
   deleteSermon,
   updateSermon,
   fetchSermons,
-  fetchSermon,
+  fetchLatestSermon,
   fetchSermonData
 } from '../util/sermon_api_util';
 import { hashHistory } from 'react-router';
@@ -26,9 +26,10 @@ const SermonsMiddleware = ({ getState, dispatch }) => next => action => {
   const errorCallback = xhr => dispatch(receiveErrors(xhr.responseJSON));
   let fetchAllSermonsSuccess = sermons => dispatch(receiveAllSermons(sermons));
   let fetchSermonDataSuccess = sermon => dispatch(receiveSermonData(sermon[0]));
+  let fetchSermonSuccess = sermon => dispatch(receiveSermon(sermon));
   let createSermonSuccess = sermon => {
     dispatch(receiveSermon(sermon));
-    hashHistory.push(`/sermons`);
+    hashHistory.push(`/admin`);
   };
   let removeSermonSuccess = id => {
     dispatch(removeSermon(id));
@@ -37,6 +38,9 @@ const SermonsMiddleware = ({ getState, dispatch }) => next => action => {
   switch (action.type) {
     case FETCH_SERMONS:
       fetchSermons(action.params, fetchAllSermonsSuccess);
+      return next(action);
+    case FETCH_LATEST_SERMON:
+      fetchLatestSermon(fetchSermonSuccess);
       return next(action);
     case FETCH_SERMON_DATA:
       fetchSermonData(action.id, fetchSermonDataSuccess);

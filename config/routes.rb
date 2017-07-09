@@ -8,8 +8,8 @@ Rails.application.routes.draw do
       resources :schedules, only: [:index, :create, :update]
       resources :speakers, only: [:create, :index]
       resources :seriess, only: [:create, :index]
+      resources :sermons, only: [:index, :show, :create, :destroy, :update]
       resource :session, only: [:create, :destroy]
-      resources :sermons, only: [:index, :create, :destroy, :update]
     end
     root to: 'static_pages#root'
   end

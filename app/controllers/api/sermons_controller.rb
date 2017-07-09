@@ -12,6 +12,11 @@ class Api::SermonsController < ApplicationController
     render :index
   end
 
+  def show
+    @sermon = Sermon.all.order(date: :desc)[0]
+    render :show
+  end
+
   def create
     @sermon = Sermon.new(sermon_params)
     @sermon.date = Date.parse(params[:sermon][:date])

@@ -1,11 +1,32 @@
 import React from 'react';
 import { hashHistory, withRouter, Link } from 'react-router';
 import CampusLinks from '../visit/campuslinks';
+import Modal from 'react-modal';
+import SermonModal from '../sermon/sermon_modal';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state={ModalIsOpen: false};
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  openModal() {
+    this.setState({ ModalIsOpen: true });
+  }
+
+  closeModal() {
+    this.setState({ ModalIsOpen: false });
+  }
+
+  componentWillMount() {
+    Modal.setAppElement('body');
+  }
+
+  componentDidMount() {
+    this.props.fetchLatestSermon();
   }
 
   render () {
@@ -15,7 +36,25 @@ class Home extends React.Component {
           <h1>WELCOME</h1>
         </div>
         < CampusLinks />
-        <iframe src="https://player.vimeo.com/video/222980949?autoplay=1&color=E20F28&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <h2>LATEST SERMON</h2>
+        <div className="latest-sermon-image-container" onClick={this.openModal}>
+          <img className="latest-sermon-image" src={this.props.sermon.image} />
+          <i className="fa fa-youtube-play latest-sermon-icon"
+            aria-hidden="true">
+          </i>
+        </div>
+
+        <Modal
+          className="sermon-modal"
+          isOpen={this.state.ModalIsOpen}
+          onRequestClose={this.closeModal}
+          contentLabel="Modal"
+          overlayClassName="overlay"
+          >
+
+          <SermonModal url={this.props.sermon.url}
+            closeModal={this.closeModal}/>
+        </Modal>
       </div>
     );
   }

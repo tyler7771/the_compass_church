@@ -27,6 +27,14 @@ export const fetchSermons = (params, success) => {
   });
 };
 
+export const fetchLatestSermon = (success) => {
+  $.ajax({
+    method: "GET",
+    url: "api/sermons/1",
+    success
+  });
+};
+
 export const fetchSermonData = (id, success) => {
   $.ajax({
     type:'GET',

@@ -74,3 +74,52 @@
   position: relative;
   display: flex;
 }
+
+.sermon-modal {
+  background: black;
+  border-radius: 10px;
+  outline: none;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2000;
+  width: 90%;
+  height: 80%;
+}
+
+.sermon-modal-container {
+  height: 100%;
+  width: 100%;
+}
+
+.modal-close {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  cursor: pointer;
+}
+
+.ReactModal__Overlay--after-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.sermon-player {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
