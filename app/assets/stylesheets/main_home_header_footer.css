@@ -21,6 +21,10 @@ header {
   width: 100%;
 }
 
+.header-content > a:hover {
+  background: transparent;
+}
+
 .header-image {
   height: 90px;
 }
@@ -39,9 +43,10 @@ header {
 
 .links > a:not(:last-child):hover {
   color: #E20F28;
+  background: transparent;
 }
 
-.header-about, .header-connect, .header-daycare {
+.header-about, .header-connect {
   margin: 10px;
   position: relative;
 }
@@ -58,15 +63,8 @@ header {
   background: transparent;
 }
 
-.header-daycare:hover > a {
-  color: #E20F28;
-  cursor: pointer;
-  background: transparent;
-}
-
 .header-about:hover > .about-dropdown {
   opacity: 1;
-  height: 75px;
   visibility: visible;
   opacity: 1;
   z-index: 1;
@@ -76,7 +74,6 @@ header {
 
 .header-connect:hover > .connect-dropdown {
   opacity: 1;
-  width: 120px;
   visibility: visible;
   opacity: 1;
   z-index: 1;
@@ -84,8 +81,12 @@ header {
   transition-delay: 0s, 0s, 0.3s;
 }
 
+.connect-dropdown {
+  width: 120px;
+}
+
 .about-dropdown, .connect-dropdown {
-  left: -10px;
+  top: 25px;
   position: absolute;
   transition: opacity .2s ease-out;
   opacity: 0;
@@ -99,11 +100,13 @@ header {
 .about-dropdown > a > li {
   padding: 10px 20px 0 10px;
   background: white;
+  font-size: 15px;
 }
 
 .connect-dropdown > a > li {
   padding: 10px 20px 0 10px;
   background: white;
+  font-size: 15px;
 }
 
 .about-dropdown > a:last-child > li {

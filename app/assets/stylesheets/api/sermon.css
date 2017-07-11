@@ -46,6 +46,8 @@
 .sermon-item-image {
   width: 95%;
   margin-top: 5px;
+  max-height: 150px;
+  max-width: 267px;
 }
 
 .sermon-item > p {
